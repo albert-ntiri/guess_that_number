@@ -2,6 +2,11 @@
 ## Overview
 Guess That Number is a game I built using Tkinter in Python.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
 
+## Files
+Here are the relevant files for this application:
+- **ReadMe**: This file contains a high-level walkthrough of the project.
+- **Guess_That_Number.ipynb**: This file contains the code for the application.  It is written in Jupyter Notebook.
+- **images**: This folder has screenshots of the application.
 
 ## Structure
 This application has 3 pages:
