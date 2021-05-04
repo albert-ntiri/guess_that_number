@@ -48,12 +48,12 @@ To develop this app, I followed a process that included 4 main components:
 3. Connect the front and back ends.
 4. Refactor.
 
-### Develop the back end.
+### 1. Develop the back end.
 
-### Design the front end.
+### 2. Design the front end.
 
-### Connect the front and back ends.
+### 3. Connect the front and back ends.
 
-### Refactor.
+### 4. Refactor.
 
 ## Testing
