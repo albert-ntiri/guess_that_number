@@ -4,7 +4,7 @@ Guess That Number is a game I built using Tkinter in Python.  The object of the 
 
 ## Files
 Here are the relevant files for this application:
-- [README](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
+- [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
 - [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
 - [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/images): This folder has screenshots of the application.
 
@@ -14,7 +14,7 @@ This application has 3 pages:
 - **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
 - **Farewell Page**: This is the final page the user sees once the game has ended.  It consists of a message that displays based on the outcome of the game and a button to play again if the user chooses.
 
-<img src='images/Welcome_Page.png' alt='welcome_page' width='325'/> <img src='images/Game_Page.png' alt='game_page' width='325'/> <img src='images/Farewell_Page.png' alt='farewell_page' width='325'/>
+<img src='images/Welcome_Page.png' alt='welcome_page' width='400'/> <img src='images/Game_Page.png' alt='game_page' width='400'/> <img src='images/Farewell_Page.png' alt='farewell_page' width='400'/>
 
 ## Code Structure
 The code follows an object-oriented programming format.  It consists of 10 classes:
