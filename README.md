@@ -11,7 +11,7 @@ This application has 3 pages:
 
 
 ## Code Structure
-The code follows an object-oriented programming structure.  It consists of 10 classes:
+The code follows an object-oriented programming format.  It consists of 10 classes:
 - **Number**: This class validates user entries from both the custom range and guess fields to determine whether they are integers and if the range is ordered properly.  It also generates random numbers, which are used to select a winning number and pick some of the hints.
 - **HintGenerator**: This class takes the winning number and uses it to generate a list of hints.  These hints include but are not limited to prime numbers, factors, multiples, and characteristics about the digits.
 - **Page**: This class serves as a toolkit with methods used to create widgets and a list of attributes defining the styles and colors to be used on the application.
