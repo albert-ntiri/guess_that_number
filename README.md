@@ -9,7 +9,7 @@ This application has 3 pages:
 - **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
 - **Farewell Page**: This is the final page the user sees once the game has ended.  It consists of a message that displays based on the outcome of the game and a button to play again if the user chooses.
 
-![welcome_page](welcome_page.png)
+![welcome_page](images/welcome_page.png)
 
 ## Code Structure
 The code follows an object-oriented programming format.  It consists of 10 classes:
