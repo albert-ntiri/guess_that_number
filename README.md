@@ -4,9 +4,9 @@ Guess That Number is a game I built using Tkinter in Python.  The object of the 
 
 ## Files
 Here are the relevant files for this application:
-- **ReadMe**: This file contains a high-level walkthrough of the project.
-- **Guess_That_Number.ipynb**: This file contains the code for the application.  It is written in Jupyter Notebook.
-- **images**: This folder has screenshots of the application.
+- [README](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
+- [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
+- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/images): This folder has screenshots of the application.
 
 ## Structure
 This application has 3 pages:
