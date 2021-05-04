@@ -40,3 +40,20 @@ The code follows an object-oriented programming format.  It consists of 10 class
 - **AppText**: This class serves as a centralized location for all of the text displayed on the application.  It contains a dictionary attribute with all of that text, along with methods for other classes to retrieve specific text.
 - **AppManager**: This class builds the header and all of the pages.  It specifies the styles of the widgets, assigns those styles and the colors to different widgets, configures the buttons with their commands and text variables with their label widgets, and manages which page shows on the screen.
 - **Game**: This class operates the game from setting it up and starting it, to verifying answers and providing hints, to ending it and determining the final score.
+
+## Process
+To develop this app, I followed a process that included 4 main components:
+1. Develop the back end.
+2. Design the front end.
+3. Connect the front and back ends.
+4. Refactor.
+
+### Develop the back end.
+
+### Design the front end.
+
+### Connect the front and back ends.
+
+### Refactor.
+
+## Testing
