@@ -37,7 +37,7 @@ The code follows an object-oriented programming format.  It consists of 10 class
 - **WelcomePage**: This class uses methods inherited from the Page class to specify each widget on the Welcome Page along with its size and location.
 - **GamePage**: This class uses methods inherited from the Page class to specify each widget on the Game Page along with its size and location.
 - **FarewellPage**: This class uses methods inherited from the Page class to specify each widget on the Farewell Page along with its size and location.
-- **AppText**: This class serves as a centralized location for all of the text displayed on the application.  It contains a dictionary attribute with all of that text, along with methods for other classes to retrieve specific text.
+- **AppText**: This class serves as a centralized location for the text displayed on the application.  It contains a dictionary attribute with all of that text, along with methods for other classes to retrieve specific text.
 - **AppManager**: This class builds the header and all of the pages.  It specifies the styles of the widgets, assigns those styles and the colors to different widgets, configures the buttons with their commands and text variables with their label widgets, and manages which page shows on the screen.
 - **Game**: This class operates the game from setting it up and starting it, to verifying answers and providing hints, to ending it and determining the final score.
 
@@ -52,25 +52,25 @@ To develop this app, I followed a process that included 4 main components:
 The first step was figuring out how the game was going to work.  During this step, I laid out 2 classes: 1 for carrying out the logic of the game and 1 for generating the hints.  The logic of the game included setting a range, picking a winning number, checking answers, and establishing a scoring system, resulting in the Game class.  I put the logic for generating hints into a separate class because there were a variety of ways to come up with a hint, which could result in a lot of code just for hints so I thought it best to isolate that in its own class.
 
 ### 2. Design the front end.
-Once I established the logic for the game, I proceeded to build an interface for it.  This began with conceptualizing the number of pages and how each page might look, and then proceeding to build each one separately.  The design was based on how the game works.  For example, at minimum, there needed to be a button to start the game, along with one for submitting a guess.  Similarly, there needed to be an entry field where users could type in their guess and text displaying the range to guess from and the hints as they were provided.
+Once I established the logic for the game, I proceeded to build an interface for it.  This began with conceptualizing the number of pages and how each page might look, and then proceeding to build each one separately.  The design was based on how the game works.  For example, at minimum, there needed to be a button to start the game, along with one for submitting a guess.  Similarly, there needed to be an entry field where users could type in their guess, along with text displaying the range to guess from and the hints as they were provided.
 
 ### 3. Connect the front and back ends.
-After finishing the back end and front end logic, separately, the next step was to figure out how to get them to work together.  This included things like getting the application to show the next page at the appropriate time, getting the right text to display when and where it was supposed to, and laying out the process of opening and playing the game in such a way that there were no dependency issues.  During this step, I also converted the logic from step 2 into object-oriented programming format.  This resulted in the Page, WelcomePage, GamePage, FarewellPage, and AppManager classes.
+After finishing the back end and front end logic, separately, the next step was to figure out how to get them to work together.  This included things like getting the application to show the next page at the appropriate time, getting the right text to display when and where it was supposed to, and laying out the process for opening and playing the game in such a way that there were no dependency issues.  During this step, I also converted the logic from step 2 into object-oriented programming format.  This resulted in the Page, WelcomePage, GamePage, FarewellPage, and AppManager classes.
 
 ### 4. Refactor.
 At this point, I was able to run the game successfully without any major bugs preventing a full game from being played.  From there, I went back and relooked at everything, searching for ways to make it better, more efficient, and more reliable.  In this step, I identified operations I was performing multiple times in different places and turned them into methods.  I also discovered opportunities to add new attributes that simplified the logic of some of the methods, making them more clean and readable.  I also cleaned up the pages but separating the header into its own class and made the decision to move all of the text to a centralized location instead of hardcoding it in various places.  This resulted in the Number, Header, and AppText classes.
 
 ## Testing
-Testing was a major component of developing this application.  I tested it manually, which included a series of steps that follow a general trend of starting from the micro-level and gradually increasing the scope.
+Testing was a major component of developing this application.  I tested it manually, which included a series of steps, starting from the micro-level and gradually increasing the scope.
 
 ### Unit Testing
-At the lowest level, I verified each individual piece of functionality one by one to make sure it was working.  This included every attribute and method of each class.  If a method was not behaving as expected, I sometimes converted to a function outside of the class to get it working before returning to the method.
+At the lowest level, I verified each individual piece of functionality one by one to make sure it was working.  This included every attribute and method of each class.  If a method was not behaving as expected, I sometimes converted it into a function outside of the class to get it working before returning to the method.
 
 ### Methods That Call Other Methods or Use Multiple Attributes Within a Class
-Once everything was working on the micro level, I tested more complex methods, either because they use multiple attributes or call other methods from that class.  From there, I continued this process until I reached the highest-level methods within each class.
+Once everything was working on the micro level, I tested more complex methods, either because they used multiple attributes or called other methods from that class.  From there, I continued this process until I reached the highest-level methods within each class.
 
 ### Interaction Between Classes
-After I tested everything within each class, the next step was to focus on interactivity between classes.  This primarily composed of 2 things: methods that access an attribute from a different class or methods that call a method from a different class.  Much of connecting the front and back ends fell into this step.
+After I tested everything within each class, the next step was to focus on interactivity between classes.  This primarily composed of 2 things: methods that accessed an attribute from a different class and methods that called a method from a different class.  Much of connecting the front and back ends fell into this step.
 
 ### Running the Whole Game
 Finally, I ran the whole game several times, looking at everything in context.  This step required running through multiple scenarios:
@@ -79,4 +79,5 @@ Finally, I ran the whole game several times, looking at everything in context.  
 - Purposefully inputting invalid entries to verify the appropriate error was being displayed
 - Winning, losing, and quitting the game to see each experience in action
 - Getting different types of winning numbers and verifying the accuracy and utility of the hints.
+
 Most of the refactoring ideas emerged from this step.
