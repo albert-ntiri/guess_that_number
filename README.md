@@ -42,7 +42,7 @@ The code follows an object-oriented programming format.  It consists of 10 class
 - **Game**: This class operates the game from setting it up and starting it, to verifying answers and providing hints, to ending it and determining the final score.
 
 ## Process
-To develop this app, I followed a process that included 4 main components:
+To develop this app, I followed a process that included 4 main steps:
 1. Develop the back end.
 2. Design the front end.
 3. Connect the front and back ends.
