@@ -34,7 +34,7 @@ The code follows an object-oriented programming format.  It consists of 10 class
 ### UML Class Diagram
 
 <p align='center'>
-  <img src='images/UML_Class_Diagram.png' alt='uml_class_diagram' width='400'/>
+  <img src='images/UML_Class_Diagram.png' alt='uml_class_diagram' width='800'/>
 </p>
 
 ### Class Descriptions
