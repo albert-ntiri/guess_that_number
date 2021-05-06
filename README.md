@@ -1,6 +1,8 @@
 # Guess That Number
 
-![](images/Guess_That_Number_Demo.gif)
+<p align='center'>
+  <img src='images/Guess_That_Number_Demo.gif' alt='demo'/>
+</p>
 
 ## Overview
 Guess That Number is a game I built using Tkinter in Python.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
