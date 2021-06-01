@@ -32,7 +32,7 @@ This application has 3 pages:
 - **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
 
 <p align='center'>
-  <img src='version_1/images/game_page1.png' alt='game_page' width='400'/> <img src='version_2/images/game_page2.png' alt='game_page2' width='400'/>
+  <img src='version_2/images/game_page1.png' alt='game_page' width='400'/> <img src='version_2/images/game_page2.png' alt='game_page2' width='400'/>
 </p>
 
 - **Farewell Page**: This is the final page the user sees once the game has ended.  It consists of a message that displays based on the outcome of the game and a button to play again if the user chooses.
