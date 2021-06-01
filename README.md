@@ -9,6 +9,7 @@ Guess That Number is a game I built in Python.  The original version uses the Tk
 
 ## Files
 Here are the relevant files for this application:
+
 **VERSION 1**
 - [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
 - [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
