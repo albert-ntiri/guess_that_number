@@ -1,7 +1,7 @@
 # Guess That Number
 
 ## Overview
-Guess That Number is a game I built using Tkinter in Python.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
+Guess That Number is a game I built in Python.  The original version uses the Tkinter library, while the updated version uses Kivy.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
 
 <p align='center'>
   <img src='version_1/images/Guess_That_Number_Demo.gif' alt='demo'/>
@@ -9,10 +9,14 @@ Guess That Number is a game I built using Tkinter in Python.  The object of the 
 
 ## Files
 Here are the relevant files for this application:
+**VERSION 1**
 - [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
 - [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
 - [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.py): This is the .py file for the application, which was used to create an executable.
 - [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder has screenshots of the application.
+
+**VERSION 2**
+- 
 
 ## Structure
 This application has 3 pages:
