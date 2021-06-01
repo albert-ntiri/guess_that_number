@@ -42,7 +42,7 @@ This application has 3 pages:
 </p>
 
 ## Code Structure
-The code follows an object-oriented programming format.  Version 1 consists of 10 classes.  Note: *The sections below describe the classes in version 1.  Version 2 has some changes in the classes.*
+The code follows an object-oriented programming format.  Version 1 consists of 10 classes.  *Note: The sections below describe the classes in version 1.  Version 2 has some changes in the classes.*
 
 ### UML Class Diagram
 
