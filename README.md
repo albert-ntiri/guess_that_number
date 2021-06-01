@@ -26,19 +26,19 @@ This application has 3 pages:
 - **Welcome Page**: This is the landing page for the game.  It consists of a description for the game, options for selecting a level of difficulty or inputting a custom range, and a play button to start the game.
 
 <p align='center'>
-  <img src='version_1/images/Welcome_Page.png' alt='welcome_page' width='400'/> <img src='version_1/images/Welcome_Page2.png' alt='welcome_page2' width='400'/>
+  <img src='version_2/images/welcome_page1.png' alt='welcome_page' width='400'/> <img src='version_2/images/welcome_page2.png' alt='welcome_page2' width='400'/>
 </p>
 
 - **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
 
 <p align='center'>
-  <img src='version_1/images/Game_Page.png' alt='game_page' width='400'/> <img src='version_1/images/Game_Page2.png' alt='game_page2' width='400'/>
+  <img src='version_1/images/game_page1.png' alt='game_page' width='400'/> <img src='version_2/images/game_page2.png' alt='game_page2' width='400'/>
 </p>
 
 - **Farewell Page**: This is the final page the user sees once the game has ended.  It consists of a message that displays based on the outcome of the game and a button to play again if the user chooses.
 
 <p align='center'>
-  <img src='version_1/images/Farewell_Page.png' alt='farewell_page' width='400'/> <img src='version_1/images/Farewell_Page2.png' alt='farewell_page2' width='400'/>
+  <img src='version_2/images/farewell_page1.png' alt='farewell_page' width='400'/> <img src='version_2/images/farewell_page2.png' alt='farewell_page2' width='400'/>
 </p>
 
 ## Code Structure
