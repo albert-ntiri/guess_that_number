@@ -17,7 +17,9 @@ Here are the relevant files for this application:
 - [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder has screenshots of the application.
 
 **VERSION 2**
-- 
+- [**guess_that_number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number.py): This is the main .py file with the code to create the UI and logic to run the game.  There are also several other files with supporting classes.
+- [**guess_that_number_design.kv**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number_design.kv): This is the design file written in the Kivy language to define the widgets on each page and their layout.
+- [**database_create_db.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/database_create_db.py): This file contains the SQL query for creating the database used for the application.  There are also other database-related files for populating the database.
 
 ## Structure
 This application has 3 pages:
