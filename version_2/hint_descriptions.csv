@@ -1,0 +1,11 @@
+hint_type,hint_description
+factor,"Factor: Any integer which divides evenly into a given integer. For example, 8 is a factor of 24.
+Divisible: When dividing by a certain number gives a whole number answer."
+multiple,Multiple: The result of multiplying a number by an integer (not by a fraction).
+prime,"Prime: A positive integer which has only 1 and the number itself as factors. For example, 2, 3, 5, 7, 11, 13, etc. are all primes. By convention, the number 1 is not prime."
+even_odd,"Even: An integer that is a multiple of 2. The even numbers are { . . . , –4, –2, 0, 2, 4, 6, . . . }.
+Odd: An integer that is not a multiple of 2. The odd numbers are { . . . , –3, –1, 1, 3, 5, . . . }."
+perfect_square,"Perfect Square: Any number that is the square of a rational number. For example, 0, 1, 4, 9, 16, 25, etc. are all perfect squares. So are and ."
+digit_sum,"Digit: Any of the symbols 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 used to write numbers. For example, the digits in the number 361 are 3, 6, and 1.
+Sum: The result of adding a set of numbers or algebraic expressions."
+digit_length,"Digit: Any of the symbols 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 used to write numbers. For example, the digits in the number 361 are 3, 6, and 1."
