@@ -4,34 +4,34 @@
 Guess That Number is a game I built using Tkinter in Python.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
 
 <p align='center'>
-  <img src='images/Guess_That_Number_Demo.gif' alt='demo'/>
+  <img src='version_1/images/Guess_That_Number_Demo.gif' alt='demo'/>
 </p>
 
 ## Files
 Here are the relevant files for this application:
 - [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
-- [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
-- [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/Guess_That_Number.py): This is the .py file for the application, which was used to create an executable.
-- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/images): This folder has screenshots of the application.
+- [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
+- [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.py): This is the .py file for the application, which was used to create an executable.
+- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder has screenshots of the application.
 
 ## Structure
 This application has 3 pages:
 - **Welcome Page**: This is the landing page for the game.  It consists of a description for the game, options for selecting a level of difficulty or inputting a custom range, and a play button to start the game.
 
 <p align='center'>
-  <img src='images/Welcome_Page.png' alt='welcome_page' width='400'/> <img src='images/Welcome_Page2.png' alt='welcome_page2' width='400'/>
+  <img src='version_1/images/Welcome_Page.png' alt='welcome_page' width='400'/> <img src='version_1/images/Welcome_Page2.png' alt='welcome_page2' width='400'/>
 </p>
 
 - **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
 
 <p align='center'>
-  <img src='images/Game_Page.png' alt='game_page' width='400'/> <img src='images/Game_Page2.png' alt='game_page2' width='400'/>
+  <img src='version_1/images/Game_Page.png' alt='game_page' width='400'/> <img src='version_1/images/Game_Page2.png' alt='game_page2' width='400'/>
 </p>
 
 - **Farewell Page**: This is the final page the user sees once the game has ended.  It consists of a message that displays based on the outcome of the game and a button to play again if the user chooses.
 
 <p align='center'>
-  <img src='images/Farewell_Page.png' alt='farewell_page' width='400'/> <img src='images/Farewell_Page2.png' alt='farewell_page2' width='400'/>
+  <img src='version_1/images/Farewell_Page.png' alt='farewell_page' width='400'/> <img src='version_1/images/Farewell_Page2.png' alt='farewell_page2' width='400'/>
 </p>
 
 ## Code Structure
@@ -40,7 +40,7 @@ The code follows an object-oriented programming format.  It consists of 10 class
 ### UML Class Diagram
 
 <p align='center'>
-  <img src='images/UML_Class_Diagram.png' alt='uml_class_diagram' width='1000'/>
+  <img src='version_1/images/UML_Class_Diagram.png' alt='uml_class_diagram' width='1000'/>
 </p>
 
 ### Class Descriptions
