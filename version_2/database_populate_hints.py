@@ -60,7 +60,7 @@ a = AppText()
 
 for i in range(1, 101):
     hint_obj = HintGenerator(i)
-    hints = hint_obj.generate_hints()
+    hints = hint_obj.generate_hints(check_db=False, filter_results=False)
     for hint in hints:
         hint_type = a.get_hint_type(hint)
         hint_type_id = c.execute("SELECT id FROM hint_type WHERE code = " + "'{}'".format(hint_type)).fetchone()[0]
