@@ -25,8 +25,9 @@ PageManager:
 	color: (0,0,0,1)
 
 <Button>
-	background_color: (0, .8, 0, 1)
+	background_color: (1,1,1,1)
 	bold: True
+	border: (20,20,20,20)
 
 <TextInput>
 	multiline: False
@@ -334,7 +335,7 @@ PageManager:
 				id: feedback_text
 				text: ""
 				font_size: 17 if root.width > 550 else 15
-				text_size: (750, None)
+				text_size: (root.width - 50, None)
 				halign: "left"
 				color: (.3,0,.9,1)
 

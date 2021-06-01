@@ -309,7 +309,7 @@ class GuessThatNumberGame(App):
         self.farewell_page = FarewellPage()
         
     def build(self):
-        Window.clearcolor = (0,.7,0,1)
+        Window.clearcolor = (.45,.9,0,0)
         
         return display
 
