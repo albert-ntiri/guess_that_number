@@ -4,7 +4,7 @@
 Guess That Number is a game I built in Python.  The original version uses the Tkinter library, while the updated version uses Kivy.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
 
 <p align='center'>
-  <img src='version_2/images/demo.gif' alt='demo' width='400'/>
+  <img src='version_2/images/demo.gif' alt='demo' width='600'/>
 </p>
 
 ## Files
