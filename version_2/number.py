@@ -20,6 +20,7 @@ class Number:
     def validate_guess(self, guess, hint, hint_type):
         number = self._pattern_match("\d+", hint, value=True)
         number = int(number) if number else None
+        digits = [int(d) for d in str(guess) if d != "-"]
         
         if hint_type == "factor":
             digit_hint = self._pattern_match("digits", hint)
@@ -39,10 +40,10 @@ class Number:
                 else:
                     number_count = "all"
                 
-                digit_count = len([d for d in str(guess) if guess % int(d) == 0 and d != 0])
+                digit_count = len([d for d in digits if guess % d == 0 and d != 0])
                 if digit_count == 0:
                     guess_digit_count = "none"
-                elif digit_count == len([d for d in str(guess)]):
+                elif digit_count == len(digits):
                     guess_digit_count = "all"
                 else:
                     guess_digit_count = str(digit_count)
@@ -71,11 +72,11 @@ class Number:
                 else:
                     number_count = "all"
                 
-                digit_count = len([d for d in str(guess) if len(
-                        [i for i in range(1, int(d) + 1) if int(d) % i == 0]) == 2])
+                digit_count = len([d for d in digits if len(
+                        [i for i in range(1, d + 1) if d % i == 0]) == 2])
                 if digit_count == 0:
                     guess_digit_count = "none"
-                elif digit_count == len([d for d in str(guess)]):
+                elif digit_count == len(digits):
                     guess_digit_count = "all"
                 else:
                     guess_digit_count = str(digit_count)
@@ -90,10 +91,10 @@ class Number:
                 feedback = "good" if winning_number_tag == guess_tag else "bad"
             
             else:
-                even_digits = len([d for d in str(guess) if int(d) % 2 == 0])
+                even_digits = len([d for d in digits if d % 2 == 0])
                 if even_digits == 0 and winning_number_tag == "odd":
                     feedback = "good"
-                elif even_digits == len([d for d in str(guess)]) and winning_number_tag == "even":
+                elif even_digits == len(digits) and winning_number_tag == "even":
                     feedback = "good"
                 else:
                     feedback = "bad"
@@ -111,10 +112,10 @@ class Number:
                 else:
                     number_count = "all"
                 
-                digit_count = len([d for d in str(guess) if int(d)**.5 in range(int(d) + 1)])
+                digit_count = len([d for d in digits if d**.5 in range(d + 1)])
                 if digit_count == 0:
                     guess_digit_count = "none"
-                elif digit_count == len([d for d in str(guess)]):
+                elif digit_count == len(digits):
                     guess_digit_count = "all"
                 else:
                     guess_digit_count = str(digit_count)
@@ -122,11 +123,11 @@ class Number:
                 feedback = "good" if number_count == guess_digit_count else "bad"
         
         elif hint_type == "digit_sum":
-            digit_sum = sum([int(d) for d in str(guess) if d != '-'])
+            digit_sum = sum(digits)
             feedback = "good" if digit_sum == number else "bad"
         
         elif hint_type == "digit_length":
-            feedback = "good" if len(str(guess)) == len(str(number)) else "bad"
+            feedback = "good" if len(digits) == len(str(number)) else "bad"
         
         return feedback
     
