@@ -43,15 +43,18 @@ class Number:
                 digit_count = len([d for d in digits if guess % d == 0 and d != 0])
                 if digit_count == 0:
                     guess_digit_count = "none"
-                elif digit_count == len(digits):
-                    guess_digit_count = "all"
-                else:
+                elif digit_count == number:
                     guess_digit_count = str(digit_count)
+                else:
+                    guess_digit_count = "all"
                 
                 feedback = "good" if number_count == guess_digit_count else "bad"
         
         elif hint_type == "multiple":
-            feedback = "good" if number % guess == 0 else "bad"
+            if guess != 0:
+                feedback = "good" if number % guess == 0 else "bad"
+            else:
+                feedback = "good" if number == guess else "bad"
         
         elif hint_type == "prime":
             digit_hint = self._pattern_match("digits", hint)
@@ -76,10 +79,10 @@ class Number:
                         [i for i in range(1, d + 1) if d % i == 0]) == 2])
                 if digit_count == 0:
                     guess_digit_count = "none"
-                elif digit_count == len(digits):
-                    guess_digit_count = "all"
-                else:
+                elif digit_count == number:
                     guess_digit_count = str(digit_count)
+                else:
+                    guess_digit_count = "all"
                 
                 feedback = "good" if number_count == guess_digit_count else "bad"
         
@@ -115,10 +118,10 @@ class Number:
                 digit_count = len([d for d in digits if d**.5 in range(d + 1)])
                 if digit_count == 0:
                     guess_digit_count = "none"
-                elif digit_count == len(digits):
-                    guess_digit_count = "all"
-                else:
+                elif digit_count == number:
                     guess_digit_count = str(digit_count)
+                else:
+                    guess_digit_count = "all"
                 
                 feedback = "good" if number_count == guess_digit_count else "bad"
         
@@ -127,7 +130,7 @@ class Number:
             feedback = "good" if digit_sum == number else "bad"
         
         elif hint_type == "digit_length":
-            feedback = "good" if len(digits) == len(str(number)) else "bad"
+            feedback = "good" if len(digits) == number else "bad"
         
         return feedback
     

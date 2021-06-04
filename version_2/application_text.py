@@ -181,9 +181,11 @@ class AppText:
             hint = hint["one"]
         elif match_count == digit_count:
             hint = hint["all"]
-        else:
+        elif match_count < digit_count:
             hint = hint["some"]
             hint = hint.format(match_count)
+        else:
+            return
         
         return hint
     
@@ -205,18 +207,7 @@ class AppText:
                 return key
     
     def get_feedback(self, hint_type, hint_description, examples):
-        topics = {
-            "multiple": "multiples",
-            "prime": "prime numbers",
-            "factor": "factors",
-            "perfect_square": "perfect squares",
-            "even_odd": "even/odd numbers",
-            "digit_sum": "digit sums",
-            "digit_length": "n-digit numbers"
-        }
-        topic = topics[hint_type]
-        
-        general_feedback = self._get_general_feedback(topic)
+        general_feedback = self._get_general_feedback(hint_type)
         description_feedback = self._get_description_feedback(hint_description)
         example_feedback = []
         for ex in examples:
@@ -234,8 +225,19 @@ class AppText:
         return feedback
     
     def _get_general_feedback(self, hint_type):
+        topics = {
+            "multiple": "multiples",
+            "prime": "prime numbers",
+            "factor": "factors",
+            "perfect_square": "perfect squares",
+            "even_odd": "even/odd numbers",
+            "digit_sum": "digit sums",
+            "digit_length": "n-digit numbers"
+        }
+        topic = topics[hint_type]
+        
         feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "general")]
-        feedback = feedback.format(hint_type)
+        feedback = feedback.format(topic)
         return feedback
     
     def _get_specific_feedback(self, guess, hint):
