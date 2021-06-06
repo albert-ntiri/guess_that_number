@@ -31,7 +31,7 @@ class HintGenerator:
         
         self.number = number
         self.digits = [int(d) for d in str(self.number) if d != '-']
-        self.factors = []
+        self.factors = [i for i in range(1, self.number + 1) if self._is_factor(self.number, i)]
         self.hints = []
         self.app_text = AppText()
         self.num_obj = Number()
@@ -85,8 +85,8 @@ class HintGenerator:
         """This method checks what factors the winning number has and adds a separate hint for each factor.  It also adds
         a hint for each digit that is a factor of the number."""
         
-        # Create list of factors for the number.
-        self.factors = [i for i in range(1, self.number + 1) if self._is_factor(self.number, i)]
+        # # Create list of factors for the number.
+        # self.factors = [i for i in range(1, self.number + 1) if self._is_factor(self.number, i)]
         
         # If the number is not prime (more than 2 factors), add a hint for number of factors.
         if len(self.factors) > 2:
@@ -140,8 +140,7 @@ class HintGenerator:
         
         # If it is at least a 2-digit number, add a hint for the number of prime digits.
         if len(self.digits) > 1:
-            digits_list = [d for d in self.digits if (d != 0) and (d != 1)]
-            prime_digits = self._prime_count(digits_list)
+            prime_digits = self._prime_count(self.digits)
             digits_hint = self.app_text.get_count_based_hint("prime", len(self.digits), prime_digits)
             self.hints.append(digits_hint)
     
@@ -194,7 +193,8 @@ class HintGenerator:
     
     def _prime_count(self, num_list):
         """This method takes in a list of numbers and returns the number of prime numbers in the list."""
-        return len([n for n in num_list if (len([n for i in range(2, n) if self._is_factor(n, i)]) == 0)])
+        return len([n for n in num_list if (len([n for i in range(2, n) if self._is_factor(n, i)]) == 0)
+                    and n not in [0, 1]])
     
     @staticmethod
     def _is_factor(x, y):
