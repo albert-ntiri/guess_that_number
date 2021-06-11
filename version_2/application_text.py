@@ -108,9 +108,12 @@ class AppText:
                         }
                     },
                     "feedback": {
-                        ("farewell_page", "general"): "Feedback:\nSome of your guesses did not match the hints.  For example: {}.",
-                        ("farewell_page", "example"): 'Your guess, {}, did not match the hint: "{}"',
-                        ("farewell_page", "definition"): "Remember:\n{}"
+                        ("farewell_page", "improvement"): {
+                            "general": "Feedback:\nSome of your guesses did not match the hints.  For example: {}.",
+                            "example": 'Your guess, {}, did not match the hint: "{}"',
+                            "definition": "Remember:\n{}"
+                        },
+                        ("farewell_page", "recommendation"): "Recommended {} for your next game: {}."
                     },
                     "outcome": {
                         ("farewell_page", "win"): "That's correct! Congratulations! You are a winner!!!\n\nYour Score: {}\n\n\nThanks for playing! Please come back soon.",
@@ -190,6 +193,8 @@ class AppText:
         return hint
     
     def get_hint_type(self, hint):
+        """This method takes in a hint and returns the corresponding hint type."""
+        
         import re
         keywords = {
             "multiple": "multiple",
@@ -207,6 +212,8 @@ class AppText:
                 return key
     
     def get_feedback(self, hint_type, hint_description, examples):
+        """This method gets the different components of user feedback and returns the overall message."""
+        
         general_feedback = self._get_general_feedback(hint_type)
         description_feedback = self._get_description_feedback(hint_description)
         example_feedback = []
@@ -225,6 +232,8 @@ class AppText:
         return feedback
     
     def _get_general_feedback(self, hint_type):
+        """This method returns the first component of user feedback, indicating the area of improveent."""
+        
         topics = {
             "multiple": "multiples",
             "prime": "prime numbers",
@@ -236,18 +245,29 @@ class AppText:
         }
         topic = topics[hint_type]
         
-        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "general")]
+        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "improvement")]["general"]
         feedback = feedback.format(topic)
         return feedback
     
     def _get_specific_feedback(self, guess, hint):
-        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "example")]
+        """This method returns the second component of user feedback, showing the example."""
+        
+        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "improvement")]["example"]
         feedback = feedback.format(guess, hint)
         return feedback
     
     def _get_description_feedback(self, description):
-        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "definition")]
+        """This method returns the third component of user feedback, showing the definition of the topic."""
+        
+        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "improvement")]["definition"]
         feedback = feedback.format(description)
+        return feedback
+    
+    def get_recommendation_msg(self, rec_type, value):
+        """This method returns a recommendation based on a target score or level of difficulty."""
+        
+        feedback = self.application_text["dynamic"]["feedback"][("farewell_page", "recommendation")]
+        feedback = feedback.format(rec_type, value)
         return feedback
     
     def get_last_msg(self, outcome, score=None):

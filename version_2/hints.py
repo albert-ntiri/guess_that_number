@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 18 07:39:42 2021
-
-@author: alber
-"""
-
-
 from application_text import AppText
 from number import Number
 
@@ -23,11 +15,12 @@ class HintGenerator:
         hints: A list of hints that is generated for the number.
         app_text: An object of the AppText class.
         num_obj: An object of the Number class.
+        session_obj: An object of the Session class.
     """
     
     def __init__(self, number, session_obj=None):
         """The constructor for this class takes in a number and saves it as an attribute.  It also creates a list of digits
-        that make up that number and saves that list as another attribute."""
+        that make up that number, as well as a list of factors of the number, and saves those lists as attributes."""
         
         self.number = number
         self.digits = [int(d) for d in str(self.number) if d != '-']
@@ -46,8 +39,10 @@ class HintGenerator:
         return hint
     
     def generate_hints(self, check_db=True, filter_results=True):
-        """This method runs all of the other methods below it to create a list of all of the hints.  The one hint not
-        included is check_greater_or_less, which is generated separately."""
+        """This method runs all of the other methods below it to create a list of all of the hints.  The one hint not 
+        included is check_greater_or_less, which is generated separately.  If check_db is True, it queries the database 
+        first to see if there is an existing set of hints for the number and only runs the other methods if it does not 
+        find the number in the database."""
         
         if not check_db:
             self._check_factors()
@@ -82,18 +77,15 @@ class HintGenerator:
         return self.hints
     
     def _check_factors(self):
-        """This method checks what factors the winning number has and adds a separate hint for each factor.  It also adds
-        a hint for each digit that is a factor of the number."""
-        
-        # # Create list of factors for the number.
-        # self.factors = [i for i in range(1, self.number + 1) if self._is_factor(self.number, i)]
+        """This method checks what factors the winning number has and adds a separate hint for each factor, along with one
+        for the number of factors.  It also adds a hint for the number of its digits that are factors."""
         
         # If the number is not prime (more than 2 factors), add a hint for number of factors.
         if len(self.factors) > 2:
             total_main_hint = self.app_text.get_value_based_hint("factor", "number", len(self.factors), subtype="count")
             self.hints.append(total_main_hint)
             
-            # Add a maximum of 2 hints for specific factors, selected randomly, not including the number itself or 1.
+            # Add hints for specific factors, not including the number itself or 1.
             for factor in self.factors[1:-1]:
                 ind_main_hint = self.app_text.get_value_based_hint("factor", "number", factor, subtype="individual")
                 self.hints.append(ind_main_hint)
@@ -106,7 +98,7 @@ class HintGenerator:
         
     def _check_multiples(self, filter_results=True):
         """This method generates a few multiples of the winning number, picks 2 of them at random, and adds a hint for each
-        of those 2."""
+        of those 2.  If filter_results is False, it returns all of the hints instead of picking 2 of them."""
         
         multiples = [self.number * i for i in range(1,6)]
         
@@ -125,7 +117,8 @@ class HintGenerator:
     
     def _check_prime(self):
         """This method checks if the winning number is a prime number and adds a hint if it is.  It also checks if the
-        individual digits are prime and adds a hint indicating the number of them that are."""
+        individual digits are prime and adds a hint indicating the number of them that are, along with one for prime 
+        factors."""
         
         # Add a hint if the number is prime (has exactly 2 factors).
         if len(self.factors) == 2:

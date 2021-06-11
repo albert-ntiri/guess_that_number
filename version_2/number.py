@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 18 07:39:42 2021
-
-@author: alber
-"""
-
-
 import numpy as np
 import re
 
@@ -13,11 +5,15 @@ import re
 
 class Number:
     """
-    The Number class validates whether specific numbers that come from user entries are integers and generates random 
-    numbers for use in picking hints and creating a winning number for the game.
+    The Number class evaluates guesses against hints, validates whether specific numbers that come 
+    from user entries are integers and generates random numbers for use in picking hints and 
+    creating a winning number for the game.
     """
     
     def validate_guess(self, guess, hint, hint_type):
+        """This method takes a guess and hint and evaluates whether the guess is in line with the 
+        hint, based on the content of the hint and the hint type."""
+        
         number = self._pattern_match("\d+", hint, value=True)
         number = int(number) if number else None
         digits = [int(d) for d in str(guess) if d != "-"]
@@ -176,6 +172,9 @@ class Number:
     
     @staticmethod
     def _pattern_match(pattern, text, value=False):
+        """This static method searches a text for a pattern and returns a boolean indicating whether 
+        it was found.  If value is True, it returns the pattern match."""
+        
         match = re.search(re.compile(pattern), text)
         if value:
             try:

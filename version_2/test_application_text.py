@@ -179,6 +179,15 @@ class TestAppText(unittest.TestCase):
         with self.assertRaises(TypeError):
             TestAppText.app_text._get_description_feedback()
     
+    def test_get_recommendation_msg(self):
+        text1 = "Recommended target score for your next game: 73."
+        self.assertEqual(TestAppText.app_text.get_recommendation_msg("target score", 73), text1)
+        text2 = "Recommended level of difficulty for your next game: medium."
+        self.assertEqual(TestAppText.app_text.get_recommendation_msg("level of difficulty", "medium"), text2)
+    
+        with self.assertRaises(TypeError):
+            TestAppText.app_text.get_recommendation_msg()
+    
     def test_get_last_msg(self):
         text1 = "That's correct! Congratulations! You are a winner!!!\n\nYour Score: 90\n\n\nThanks for playing! Please come back soon."
         self.assertEqual(TestAppText.app_text.get_last_msg("win", 90), text1)
