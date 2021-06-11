@@ -12,7 +12,6 @@ class Session:
         game_obj: An object of the GuessThatNumberGame class.
         session_id: A unique identifier for a session (user opening and using the app).
         game_ids: A list of ids representing each game the user plays during a session.
-        app_data: An object of the AppData class.
     
     Class Attributes:
         db_name: The name of the database storing data from the app.
