@@ -12,24 +12,25 @@ Here are the relevant files for this application:
 - [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
 
 **VERSION 1**
-- [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for the application.  It is written in Jupyter Notebook.
-- [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.py): This is the .py file for the application, which was used to create an executable.
-- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder has screenshots of the application.
+- [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for version 1 of the application.  It is written in Jupyter Notebook.
+- [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.py): This is the .py file for version 1 of the application, which was used to create an executable.
+- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder has screenshots of version 1 of the application.
 
 **VERSION 2**
-- [**guess_that_number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number.py): This is the main .py file with the code to create the UI and logic to run the game.  There are also several other files with supporting classes.
-- [**guess_that_number_design.kv**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number_design.kv): This is the design file written in the Kivy language to define the widgets on each page and their layout.
-- [**database_create_db.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/database_create_db.py): This file contains the SQL query for creating the database used for the application.  There are also other database-related files for populating the database.
+- [**guess_that_number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number.py): This is the main .py file for version 2 with the code to create the UI and logic to run the game.  There are also several other files with supporting classes.
+- [**guess_that_number_design.kv**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number_design.kv): This is the design file for version 2, written in the Kivy language, to define the widgets on each page and their layout.
+- [**database_create_db.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/database_create_db.py): This file contains the SQL query for creating the database used for version 2 of the application.  There are also other database-related files for populating the database.
+- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/images)
 
 ## Application Structure
 This application has 3 pages:
-- **Welcome Page**: This is the landing page for the game.  It consists of a description for the game, options for selecting a level of difficulty or inputting a custom range, and a play button to start the game.
+- **Welcome Page**: This is the landing page for the application.  It consists of a description of the game, options for selecting a level of difficulty or inputting a custom range, and a play button to start the game.
 
 <p align='center'>
   <img src='version_2/images/welcome_page1.png' alt='welcome_page' width='400'/> <img src='version_2/images/welcome_page2.png' alt='welcome_page2' width='400'/>
 </p>
 
-- **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, text showing the number of guesses the user has remaining, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
+- **Game Page**: This is the page the user sees while actively playing the game.  It consists of text indicating the range containing the winning number, the number of guesses the user has remaining, an entry box for the user to type a number, hints that display if the user guesses incorrectly, and buttons to submit their guess or quit the game.
 
 <p align='center'>
   <img src='version_2/images/game_page1.png' alt='game_page' width='400'/> <img src='version_2/images/game_page2.png' alt='game_page2' width='400'/>
@@ -45,10 +46,10 @@ This application has 3 pages:
 There are 2 components of this application that provide a personalized experience for users: feedback and recommendations.
 
 ### Feedback
-If a user is given a hint and then enters a guess that is inconsistent with that hint, the application keeps track of that and shows provides feedback to the user after the game is completed.  That feedback includes the relevant concept, the specific example, and a definition of that concept, which was scraped from 2 math websites: www.mathisfun.com and www.mathwords.com.  If there were multiple mistakes, the most prominent one is displayed.
+If a user is given a hint and then enters a guess that is inconsistent with that hint, the application keeps track of that and provides feedback to the user after the game is completed.  That feedback includes the relevant concept, the specific example, and a definition of that concept, which was scraped from 2 math websites: www.mathisfun.com and www.mathwords.com.  If there were multiple mistakes, the most prominent one is displayed.
 
 ### Recommendations
-The application uses a regression model I built to predict the score of a game, along with a classification model to predict the outcome of a game.  Once the user finishes a game, those models make predictions based on that game's data and compares it to the user's performance.  From that, the application produces a recommendation to the user for their next game.  That can come in the form of a target score to aim for or the next highest level of difficulty to try.
+The application uses a regression model to predict the score of a game, along with a classification model to predict its outcome.  Once the user finishes a game, these models make predictions based on that game's data and compares it to the user's performance.  From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
 
 ## Code Structure
 The code follows an object-oriented programming format.  Version 1 consists of 10 classes.  *Note: The sections below describe the classes in version 1.  Version 2 has some changes in the classes.*
