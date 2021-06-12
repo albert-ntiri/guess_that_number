@@ -1,7 +1,7 @@
 # Guess That Number
 
 ## Overview
-Guess That Number is a game I built in Python.  The original version uses the Tkinter library, while the updated version uses Kivy.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.
+Guess That Number is a game I built in Python.  The original version uses the Tkinter library, while the updated version uses Kivy.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.  It also provides feedback and recommendations based on the user's performance.
 
 <p align='center'>
   <img src='version_2/images/demo.gif' alt='demo' width='600'/>
@@ -40,6 +40,15 @@ This application has 3 pages:
 <p align='center'>
   <img src='version_2/images/farewell_page1.png' alt='farewell_page' width='400'/> <img src='version_2/images/farewell_page2.png' alt='farewell_page2' width='400'/>
 </p>
+
+## Personalization
+There are 2 components of this application that provide a personalized experience for users: feedback and recommendations.
+
+### Feedback
+If a user is given a hint and then enters a guess that is inconsistent with that hint, the application keeps track of that and shows provides feedback to the user after the game is completed.  That feedback includes the relevant concept, the specific example, and a definition of that concept, which was scraped from 2 math websites: www.mathisfun.com and www.mathwords.com.  If there were multiple mistakes, the most prominent one is displayed.
+
+### Recommendations
+The application uses a regression model I built to predict the score of a game, along with a classification model to predict the outcome of a game.  Once the user finishes a game, those models make predictions based on that game's data and compares it to the user's performance.  From that, the application produces a recommendation to the user for their next game.  That can come in the form of a target score to aim for or the next highest level of difficulty to try.
 
 ## Code Structure
 The code follows an object-oriented programming format.  Version 1 consists of 10 classes.  *Note: The sections below describe the classes in version 1.  Version 2 has some changes in the classes.*
