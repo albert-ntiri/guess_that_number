@@ -49,7 +49,7 @@ There are 2 components of this application that provide a personalized experienc
 If a user is given a hint and then enters a guess that is inconsistent with that hint, the application keeps track of that and provides feedback to the user after the game is completed.  That feedback includes the relevant concept, the specific example, and a definition of that concept, which was scraped from 2 math websites: www.mathisfun.com and www.mathwords.com.  If there were multiple mistakes, the most prominent one is displayed.
 
 <p align='center'>
-  <img src='version_2/images/feedback_example.png' alt='feedback_img' width='400'/>
+  <img src='version_2/images/feedback_example.png' alt='feedback_img' width='600'/>
 </p>
 
 ### Recommendations
