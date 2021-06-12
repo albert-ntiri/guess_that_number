@@ -48,8 +48,16 @@ There are 2 components of this application that provide a personalized experienc
 ### Feedback
 If a user is given a hint and then enters a guess that is inconsistent with that hint, the application keeps track of that and provides feedback to the user after the game is completed.  That feedback includes the relevant concept, the specific example, and a definition of that concept, which was scraped from 2 math websites: www.mathisfun.com and www.mathwords.com.  If there were multiple mistakes, the most prominent one is displayed.
 
+<p align='center'>
+  <img src='version_2/images/feedback_example.png' alt='feedback_img' width='400'/>
+</p>
+
 ### Recommendations
 The application uses a regression model to predict the score of a game, along with a classification model to predict its outcome.  Once the user finishes a game, these models make predictions based on that game's data and compares it to the user's performance.  From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
+
+<p align='center'>
+  <img src='version_2/images/recommendation_example.png' alt='feedback_img' width='400'/>
+</p>
 
 ## Code Structure
 The code follows an object-oriented programming format.  Version 1 consists of 10 classes.  *Note: The sections below describe the classes in version 1.  Version 2 has some changes in the classes.*
