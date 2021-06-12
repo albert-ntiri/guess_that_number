@@ -21,7 +21,7 @@ class AppText:
                     },
                     "label": {
                         ("header", "title"): "Guess That Number!",
-                        ("welcome_page", "instructions"): "Want to test your math skills?  See how quickly you can guess a number.  Select a level of difficulty and then use the hints to guess the number.  The range of numbers and the number of guesses you get depends on the level of difficulty.  Let's play!\n\n",
+                        ("welcome_page", "instructions"): "Want to test your math skills?  See how quickly you can guess a number.  Select a level of difficulty, or enter your own range, and then use the hints to guess a number within that range.  The hints are based on mathematical concepts.  The range of numbers and the number of guesses you get depends on the level of difficulty.  Let's play!\n\n",
                         ("welcome_page", "select_level"): "Select a level of difficulty:",
                         ("welcome_page", "custom_range"): "Enter your own range: ",
                         ("welcome_page", "low_range"): "Low",
