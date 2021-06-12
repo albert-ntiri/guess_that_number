@@ -93,7 +93,7 @@ After finishing the back end and front end logic, separately, the next step was 
 At this point, I was able to run the game successfully without any major bugs preventing a full game from being played.  From there, I went back and relooked at everything, searching for ways to make it better, more efficient, and more reliable.  In this step, I identified operations I was performing multiple times in different places and turned them into methods.  I also discovered opportunities to add new attributes that simplified the logic of some of the methods, making them more clean and readable.  I also cleaned up the pages but separating the header into its own class and made the decision to move all of the text to a centralized location instead of hardcoding it in various places.  This resulted in the Number, Header, and AppText classes.
 
 ## Testing
-Testing was a major component of developing this application.  I initially tested it manually, and then created unit tests to speed up subsequent testing after changes, which included a series of steps, starting from the micro-level and gradually increasing the scope.
+Testing was a major component of developing this application.  I initially tested it manually, which included a series of steps, starting from the micro-level and gradually increasing the scope.
 
 ### Unit Testing
 At the lowest level, I verified each individual piece of functionality one by one to make sure it was working.  This included every attribute and method of each class.  If a method was not behaving as expected, I sometimes converted it into a function outside of the class to get it working before returning to the method.
@@ -113,3 +113,5 @@ Finally, I ran the whole game several times, looking at everything in context.  
 - Getting different types of winning numbers and verifying the accuracy and utility of the hints.
 
 Most of the refactoring ideas emerged from this step.
+
+After completing manual testing, I created automated unit tests to speed up subsequent testing after changes.
