@@ -14,13 +14,13 @@ Here are the relevant files for this application:
 **VERSION 1**
 - [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for version 1 of the application.  It is written in Jupyter Notebook.
 - [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.py): This is the .py file for version 1 of the application, which was used to create an executable.
-- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder has screenshots of version 1 of the application.
+- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder contains screenshots of version 1 of the application.
 
 **VERSION 2**
 - [**guess_that_number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number.py): This is the main .py file for version 2 with the code to create the UI and logic to run the game.  There are also several other files with supporting classes.
 - [**guess_that_number_design.kv**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number_design.kv): This is the design file for version 2, written in the Kivy language, to define the widgets on each page and their layout.
 - [**database_create_db.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/database_create_db.py): This file contains the SQL query for creating the database used for version 2 of the application.  There are also other database-related files for populating the database.
-- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/images)
+- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/images): This folder contains screenshots of version 2 of the application.
 
 ## Application Structure
 This application has 3 pages:
