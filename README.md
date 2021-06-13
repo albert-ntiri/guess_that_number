@@ -56,10 +56,10 @@ If a user is given a hint and then enters a guess that is inconsistent with that
 The application uses a regression model to predict the score of a game, along with a classification model to predict its outcome.  Once the user finishes a game, these models make predictions based on that game's data and compares it to the user's performance.
 
 These predictions are determined using the following features:
-- range size: how many numbers the range contains
-- total hints: the number of hints provided during a game
-- total duration: how long the user took to play the game
-- guess time ratio: a ratio of the longest time before a guess to the shortest time before a guess *(this is only used to predict a score)*
+- **range size**: how many numbers the range contains
+- **total hints**: the number of hints provided during a game
+- **total duration**: how long the user took to play the game
+- **guess time ratio**: a ratio of the longest time before a guess to the shortest time before a guess *(this is only used to predict a score)*
 
 From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
 
