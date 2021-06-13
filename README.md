@@ -70,16 +70,14 @@ The code follows an object-oriented programming format.  Version 2 consists of 1
 
 ### Class Descriptions
 Here is a brief description of each class:
-- **Number**: This class validates user entries from both the custom range and guess fields to determine whether they are integers and if the range is ordered properly.  It also generates random numbers, which are used to select a winning number and pick some of the hints.
+- **Number**: This class validates user entries from both the custom range and guess fields to determine whether they are integers, if the range is ordered properly, and if the guesses match the corresponding hints.  It also generates random numbers, which are used to select a winning number and pick some of the hints.
 - **HintGenerator**: This class takes the winning number and uses it to generate a list of hints.  These hints include but are not limited to prime numbers, factors, multiples, and characteristics about the digits.
-- **Page**: This class serves as a toolkit with methods used to create widgets and a list of attributes defining the styles and colors to be used on the application.
-- **Header**: This class uses methods inherited from the Page class to specify each widget on the header along with its size and location.
-- **WelcomePage**: This class uses methods inherited from the Page class to specify each widget on the Welcome Page along with its size and location.
-- **GamePage**: This class uses methods inherited from the Page class to specify each widget on the Game Page along with its size and location.
-- **FarewellPage**: This class uses methods inherited from the Page class to specify each widget on the Farewell Page along with its size and location.
+- **WelcomePage**: This class allows users to select a level of difficulty, enter a custom range, and starts the game.
+- **GamePage**: This class operates the game, including accepting users' guesses and evaluating them, updating the score, displaying hints and the number of guesses remaining, and providing options to submit a guess or quit the game.
+- **FarewellPage**: This class displays the final screen with the thank you message, feedback or recommendations to the user, and an option to play again.
+- **PageManager**: This class defines the pages of the application and allows for switching between which displays on the screen.
 - **AppText**: This class serves as a centralized location for the text displayed on the application.  It contains a dictionary attribute with all of that text, along with methods for other classes to retrieve specific text.
-- **AppManager**: This class builds the header and all of the pages.  It specifies the styles of the widgets, assigns those styles and the colors to different widgets, configures the buttons with their commands and text variables with their label widgets, and manages which page shows on the screen.
-- **Game**: This class operates the game from setting it up and starting it, to verifying answers and providing hints, to ending it and determining the final score.
+- **GuessThatNumberGame**: This class builds the application and stores the main attributes for the games, which are used and updated by the 3 page classes: WelcomePage, GamePage, and FarewellPage.
 
 ## Process
 To develop this app, I followed a process that included 4 main steps:
