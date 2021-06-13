@@ -54,11 +54,12 @@ If a user is given a hint and then enters a guess that is inconsistent with that
 
 ### Recommendations
 The application uses a regression model to predict the score of a game, along with a classification model to predict its outcome.  Once the user finishes a game, these models make predictions based on that game's data and compares it to the user's performance.
-These predictions determined using the following features:
+
+These predictions are determined using the following features:
 - range size: how many numbers the range contains
 - total hints: the number of hints provided during a game
 - total duration: how long the user took to play the game
-- guess time ratio: a ratio of the longest time before a guess to the shortest time before a guess (this is only used to predict a score)
+- guess time ratio: a ratio of the longest time before a guess to the shortest time before a guess *(this is only used to predict a score)*
 
 From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
 
@@ -79,7 +80,7 @@ The code follows an object-oriented programming format.  Version 2 consists of 1
 Here is a brief description of each class:
 - **Number**: This class validates user entries from both the custom range and guess fields to determine whether they are integers, if the range is ordered properly, and if the guesses match the corresponding hints.  It also generates random numbers, which are used to select a winning number and pick some of the hints.
 - **HintGenerator**: This class takes the winning number and uses it to generate a list of hints.  These hints include but are not limited to prime numbers, factors, multiples, and characteristics about the digits.
-- **WelcomePage**: This class allows users to select a level of difficulty, enter a custom range, and starts the game.
+- **WelcomePage**: This class allows users to select a level of difficulty, enter a custom range, and start the game.
 - **GamePage**: This class operates the game, including accepting users' guesses and evaluating them, updating the score, displaying hints and the number of guesses remaining, and providing options to submit a guess or quit the game.
 - **FarewellPage**: This class displays the final screen with the thank you message, feedback or recommendations to the user, and an option to play again.
 - **PageManager**: This class defines the pages of the application and allows for switching between which displays on the screen.
