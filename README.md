@@ -53,7 +53,14 @@ If a user is given a hint and then enters a guess that is inconsistent with that
 </p>
 
 ### Recommendations
-The application uses a regression model to predict the score of a game, along with a classification model to predict its outcome.  Once the user finishes a game, these models make predictions based on that game's data and compares it to the user's performance.  From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
+The application uses a regression model to predict the score of a game, along with a classification model to predict its outcome.  Once the user finishes a game, these models make predictions based on that game's data and compares it to the user's performance.
+These predictions determined using the following features:
+- range size: how many numbers the range contains
+- total hints: the number of hints provided during a game
+- total duration: how long the user took to play the game
+- guess time ratio: a ratio of the longest time before a guess to the shortest time before a guess (this is only used to predict a score)
+
+From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
 
 <p align='center'>
   <img src='version_2/images/recommendation_example.png' alt='feedback_img' width='400'/>
@@ -77,6 +84,9 @@ Here is a brief description of each class:
 - **FarewellPage**: This class displays the final screen with the thank you message, feedback or recommendations to the user, and an option to play again.
 - **PageManager**: This class defines the pages of the application and allows for switching between which displays on the screen.
 - **AppText**: This class serves as a centralized location for the text displayed on the application.  It contains a dictionary attribute with all of that text, along with methods for other classes to retrieve specific text.
+- **Session**: This class tracks and stores data from the application.  It enters this data into a database and pulls data from the database as needed.
+- **AppData**: This class uses historical data from the application to make predictions on users' games and come up with recommendations to users based on their performance.
+- **Model**: This class provides the functionality to build machine learning models used for making predictions on games.
 - **GuessThatNumberGame**: This class builds the application and stores the main attributes for the games, which are used and updated by the 3 page classes: WelcomePage, GamePage, and FarewellPage.
 
 ## Process
