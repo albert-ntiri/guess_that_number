@@ -60,12 +60,12 @@ The application uses a regression model to predict the score of a game, along wi
 </p>
 
 ## Code Structure
-The code follows an object-oriented programming format.  Version 1 consists of 10 classes.  *Note: The sections below describe the classes in version 1.  Version 2 has some changes in the classes.*
+The code follows an object-oriented programming format.  Version 2 consists of 11 classes; version 1 consists of 10.  *Note: The sections below describe the classes in version 2 of the application.*
 
 ### UML Class Diagram
 
 <p align='center'>
-  <img src='version_1/images/UML_Class_Diagram.png' alt='uml_class_diagram' width='1000'/>
+  <img src='version_2/images/UML_Class_Diagram.png' alt='uml_class_diagram' width='1000'/>
 </p>
 
 ### Class Descriptions
