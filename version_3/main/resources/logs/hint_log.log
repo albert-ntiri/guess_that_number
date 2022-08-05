@@ -1,0 +1,451 @@
+2022-07-27 18:41:47,056     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,056     LOG NAME: Hints Log
+
+
+2022-07-27 18:43:20,413     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:20,414     New Hint Pool
+
+	All Hints:
+
+Nice try!  Hint: 24 is a multiple.
+Nice try!  Hint: 40 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 4 factor(s).
+Nice try!  Hint: It is a perfect cube.
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 4.
+
+
+2022-07-27 18:43:30,027     Guess #1		Guess: 8
+
+	Remaining Hints:
+
+Nice try!  Hint: 24 is a multiple.
+Nice try!  Hint: 40 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 4 factor(s).
+Nice try!  Hint: It is a perfect cube.
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 4.
+
+
+	Redundant Hints:
+
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 24 is a multiple.
+Nice try!  Hint: 40 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 4 factor(s).
+Nice try!  Hint: It is a perfect cube.
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 4.
+
+
+2022-07-27 18:43:30,095     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,375     Play Again
+
+
+
+
+2022-07-27 18:43:44,543     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:43:44,544     New Hint Pool
+
+	All Hints:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+Nice try!  Hint: It is a perfect square.
+Nice try!  Hint: It is an odd number.
+Nice try!  Hint: It is divisible by 3.
+
+
+2022-07-27 18:43:54,166     Guess #1		Guess: 67	Hint: Nice try!  Hint: It is divisible by 3.
+
+	Remaining Hints:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+Nice try!  Hint: It is a perfect square.
+
+
+	Redundant Hints:
+
+Nice try!  Hint: It is an odd number.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+Nice try!  Hint: It is a perfect square.
+Nice try!  Hint: It is an odd number.
+
+
+2022-07-27 18:44:16,701     Guess #2		Guess: 33	Hint: Nice try!  Hint: It is a perfect square.
+
+	Remaining Hints:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+
+
+	Redundant Hints:
+
+Nice try!  Hint: It is an odd number.
+Nice try!  Hint: It is an odd number.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+Nice try!  Hint: It is an odd number.
+Nice try!  Hint: It is an odd number.
+
+
+2022-07-27 18:44:54,837     Guess #3		Guess: 9
+
+	Remaining Hints:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+
+
+	Redundant Hints:
+
+Nice try!  Hint: It is an odd number.
+Nice try!  Hint: It is an odd number.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 27 is a multiple.
+Nice try!  Hint: 9 is a multiple.
+Nice try!  Hint: It has 1 prime factor(s).
+Nice try!  Hint: It has 3 factor(s).
+Nice try!  Hint: It is an odd number.
+Nice try!  Hint: It is an odd number.
+
+
+2022-07-27 18:44:54,955     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,658     Play Again
+
+
+
+
+2022-07-27 18:45:14,638     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:14,639     New Hint Pool
+
+	All Hints:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: 48 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 12.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: The sum of its digits is 12.
+
+
+2022-07-27 18:45:22,387     Guess #1		Guess: 748	Hint: Nice try!  Hint: It is divisible by 12.
+
+	Remaining Hints:
+
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: 48 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: The sum of its digits is 12.
+
+
+	Redundant Hints:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 4.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: 48 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: The sum of its digits is 12.
+
+
+2022-07-27 18:45:32,718     Guess #2		Guess: 144	Hint: Nice try!  Hint: 48 is a multiple.
+
+	Remaining Hints:
+
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: The sum of its digits is 12.
+
+
+	Redundant Hints:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: The sum of its digits is 12.
+
+
+2022-07-27 18:46:11,799     Guess #3		Guess: 96	Hint: Nice try!  Hint: The sum of its digits is 12.
+
+	Remaining Hints:
+
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: It has 10 factor(s).
+
+
+	Redundant Hints:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: None of its digits are prime numbers.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: None of its digits are prime numbers.
+
+
+2022-07-27 18:47:03,300     Guess #4		Guess: 363
+
+	Remaining Hints:
+
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: It has 10 factor(s).
+
+
+	Redundant Hints:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: None of its digits are prime numbers.
+
+
+	Total Hint Pool:
+
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect cube.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 1 of its digits is a perfect square.
+Nice try!  Hint: 192 is a multiple.
+Nice try!  Hint: All of its digits are even numbers.
+Nice try!  Hint: All of its digits are factors.
+Nice try!  Hint: It has 10 factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It has 2 prime factor(s).
+Nice try!  Hint: It is an even number.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 16.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 2.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 24.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 3.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 4.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 6.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: It is divisible by 8.
+Nice try!  Hint: None of its digits are prime numbers.
+Nice try!  Hint: None of its digits are prime numbers.
+
+
+2022-07-27 18:47:03,413     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+

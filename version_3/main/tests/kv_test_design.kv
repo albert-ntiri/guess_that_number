@@ -1,0 +1,71 @@
+PageManagerFake:
+
+<PageManagerFake>:
+	id: page_manager
+	welcome_page: welcome_page
+	game_page: game_page
+	farewell_page: farewell_page
+
+	WelcomePageFake:
+		id: welcome_page
+		name: "welcome_page"
+		manager: page_manager
+	GamePageFake:
+		id: game_page
+		name: "game_page"
+		manager: page_manager
+	FarewellPageFake:
+		id: farewell_page
+		name: "farewell_page"
+		manager: page_manager
+
+
+
+<WelcomePageFake>:
+	low_range: low_range
+	high_range: high_range
+	range_error_msg: range_error_msg
+
+	TextInput:
+		id: low_range
+		name: "low_range"
+	TextInput:
+		id: high_range
+		name: "high_range"
+	Label:
+		id: range_error_msg
+		name: "range_error_msg"
+
+
+
+<GamePageFake>:
+	guess_prompt_text: guess_prompt_text
+	status_text: status_text
+	guess: guess
+	hint_text: hint_text
+
+	Label:
+		id: guess_prompt_text
+		name: "guess_prompt_text"
+	Label:
+		id: status_text
+		name: "status_text"
+	TextInput:
+		id: guess
+		name: "guess"
+	Label:
+		id: hint_text
+		name: "hint_text"
+
+
+
+<FarewellPageFake>:
+	last_msg: last_msg
+	feedback_text: feedback_text
+
+	Label:
+		id: last_msg
+		name: "last_msg"
+	Label:
+		id: feedback_text
+		name: "feedback_text"

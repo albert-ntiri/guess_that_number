@@ -1,0 +1,103 @@
+2022-07-27 18:41:47,054     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,054     LOG NAME: Text Log
+
+
+2022-07-27 18:43:20,411     Page: Game Page	Variable: guess_prompt_text	Text: Guess a number between 1 and 10.
+
+2022-07-27 18:43:20,412     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 10
+
+2022-07-27 18:43:20,413     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:30,092     Page: Farewell Page	Variable: last_msg	Text: That's correct! Congratulations! You are a winner!!!
+
+Your Score: 100
+
+
+Thanks for playing! Please come back soon.
+
+2022-07-27 18:43:30,095     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,375     Play Again
+
+
+
+
+2022-07-27 18:43:44,541     Page: Game Page	Variable: guess_prompt_text	Text: Guess a number between 1 and 100.
+
+2022-07-27 18:43:44,541     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 5
+
+2022-07-27 18:43:44,543     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:43:54,165     Page: Game Page	Variable: hint_text	Text: Nice try!  Hint: It is divisible by 3.
+
+2022-07-27 18:43:54,165     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 4
+
+2022-07-27 18:44:16,700     Page: Game Page	Variable: hint_text	Text: Nice try!  Hint: It is a perfect square.
+
+2022-07-27 18:44:16,700     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 3
+
+2022-07-27 18:44:54,934     Page: Farewell Page	Variable: feedback_text	Text: Recommended target score for your next game: 66.
+
+2022-07-27 18:44:54,952     Page: Farewell Page	Variable: last_msg	Text: That's correct! Congratulations! You are a winner!!!
+
+Your Score: 60
+
+
+Thanks for playing! Please come back soon.
+
+2022-07-27 18:44:54,955     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,658     Play Again
+
+
+
+
+2022-07-27 18:45:14,636     Page: Game Page	Variable: guess_prompt_text	Text: Guess a number between 1 and 1000.
+
+2022-07-27 18:45:14,637     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 4
+
+2022-07-27 18:45:14,638     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:22,386     Page: Game Page	Variable: hint_text	Text: Nice try!  Hint: It is divisible by 12.
+
+2022-07-27 18:45:22,386     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 3
+
+2022-07-27 18:45:32,716     Page: Game Page	Variable: hint_text	Text: Nice try!  Hint: 48 is a multiple.
+
+2022-07-27 18:45:32,717     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 2
+
+2022-07-27 18:46:11,798     Page: Game Page	Variable: hint_text	Text: Nice try!  Hint: The sum of its digits is 12.
+
+2022-07-27 18:46:11,799     Page: Game Page	Variable: status_text	Text: Guesses Remaining: 1
+
+2022-07-27 18:47:03,375     Page: Farewell Page	Variable: feedback_text	Text: Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+2022-07-27 18:47:03,410     Page: Farewell Page	Variable: last_msg	Text: I'm sorry! You ran out of tries.
+
+Thanks for playing! Please come back soon.
+
+2022-07-27 18:47:03,413     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+

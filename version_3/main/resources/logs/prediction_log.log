@@ -1,0 +1,115 @@
+2022-07-27 18:41:47,060     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,061     LOG NAME: Prediction Log
+
+
+2022-07-27 18:42:27,535     Training Data		Score Predictor - 1422 rows	Outcome Predictor - 1631 rows
+
+2022-07-27 18:42:27,771     Score Feature Means
+
+range_size			244.1
+total_hints			2.4
+total_duration			44.0
+guess_time_ratio		4.9
+positive_feedback_percent	0.8
+win_game_percent		1.0
+
+
+2022-07-27 18:42:27,773     Score Model Metrics
+
+Training R2			0.5193880165195333
+Test R2				0.4926538246198887
+Test RMSE			14.247751916475192
+Cross Validation Score		16.857387090375518
+
+
+2022-07-27 18:42:27,794     Score Model Coefficients
+
+win_game_percent             17.067872
+total_duration                0.024324
+range_size                   -0.005690
+guess_time_ratio             -0.122269
+positive_feedback_percent    -4.335022
+total_hints                 -11.919097
+dtype: float64
+
+2022-07-27 18:42:27,893     Outcome Feature Means
+
+range_size			279.1
+total_hints			2.7
+total_duration			51.1
+positive_feedback_percent	0.8
+win_game_percent		0.9
+
+
+2022-07-27 18:42:27,893     Outcome Model Metrics
+
+Training Accuracy		0.9246575342465754
+Test Accuracy			0.91796875
+Test Precision			0.9399141630901288
+Test Recall			0.9690265486725663
+
+
+2022-07-27 18:43:20,414     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:30,096     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,376     Play Again
+
+
+
+
+2022-07-27 18:43:44,544     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:44:54,925     Score Features
+
+range_size			100
+total_hints			2
+total_duration			70.0
+guess_time_ratio		3.8
+positive_feedback_percent	1
+win_game_percent		1.0
+
+
+2022-07-27 18:44:54,926     Prediction			Actual Score - 60	Predicted Score - 66	Target Score - 66
+
+2022-07-27 18:44:54,932     Outcome Features
+
+range_size			100
+total_hints			2
+total_duration			70.0
+positive_feedback_percent	1
+win_game_percent		1.0
+
+
+2022-07-27 18:44:54,933     Prediction			Actual Outcome - win	Predicted Outcome - win
+
+2022-07-27 18:44:54,934     Recommendation Type		Score		Recommendation		66
+
+2022-07-27 18:44:54,956     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,659     Play Again
+
+
+
+
+2022-07-27 18:45:14,639     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:47:03,413     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+

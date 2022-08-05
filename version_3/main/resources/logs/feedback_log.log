@@ -1,0 +1,101 @@
+2022-07-27 18:41:47,057     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,057     LOG NAME: Feedback Log
+
+
+2022-07-27 18:43:20,414     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:30,095     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,375     Play Again
+
+
+
+
+2022-07-27 18:43:44,543     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:44:16,666     New Feedback
+
+
+Hint Type		factor
+Hint			Nice try!  Hint: It is divisible by 3.
+Guess			33
+Feedback Indicator	Good
+
+2022-07-27 18:44:54,956     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,659     Play Again
+
+
+
+
+2022-07-27 18:45:14,638     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:32,684     New Feedback
+
+
+Hint Type		factor
+Hint			Nice try!  Hint: It is divisible by 12.
+Guess			144
+Feedback Indicator	Good
+
+2022-07-27 18:46:11,767     New Feedback
+
+
+Hint Type		multiple
+Hint			Nice try!  Hint: 48 is a multiple.
+Guess			96
+Feedback Indicator	Bad
+
+2022-07-27 18:47:03,355     Current Improvement Areas
+
+multiple    1
+Name: hint_type, dtype: int64
+
+2022-07-27 18:47:03,356     Current Improvement Areas Ranked:
+
+['multiple']
+
+2022-07-27 18:47:03,367     Aggregate Improvement Areas
+
+multiple    1
+Name: hint_type, dtype: int64
+
+2022-07-27 18:47:03,367     Aggregate Improvement Areas Ranked:
+
+['multiple']
+
+2022-07-27 18:47:03,368     Top Improvement Area: multiple
+
+2022-07-27 18:47:03,368     General Feedback:
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+2022-07-27 18:47:03,374     Example Feedback:
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+2022-07-27 18:47:03,374     Description Feedback:
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+2022-07-27 18:47:03,413     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+

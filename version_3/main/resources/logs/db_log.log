@@ -1,0 +1,294 @@
+2022-07-27 18:41:47,053     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,053     LOG NAME: Database Log
+
+
+2022-07-27 18:41:47,092     Sqlite DB Connector Established
+
+2022-07-27 18:41:47,127     Session 339 Entered
+
+2022-07-27 18:43:20,379     Game Record Entered
+
+
+Data:
+
+session_id			339
+level_of_difficulty_type_id	1
+range_low			1
+range_high			10
+winning_number			8
+error				0
+
+
+2022-07-27 18:43:20,413     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:30,026     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				675
+guess				8
+feedback			None
+error				0
+
+
+2022-07-27 18:43:30,063     Outcome Record Entered
+
+
+Data:
+
+session_id			339
+game_id				675
+outcome_type_id			1
+play_again			0
+score				100
+
+
+2022-07-27 18:43:30,094     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:30,197     Game Data:
+
+   game_id  session_id  level_of_difficulty_type_id  ... recommendation_type                 time  play_again
+0      675         339                            1  ...                None  2022-07-27 18:43:30           0
+
+[1 rows x 30 columns]
+
+2022-07-27 18:43:39,371     Outcome Record Updated
+
+
+Data:
+
+session_id			339
+game_id				675
+
+
+2022-07-27 18:43:39,374     Play Again
+
+
+
+
+2022-07-27 18:43:44,513     Game Record Entered
+
+
+Data:
+
+session_id			339
+level_of_difficulty_type_id	2
+range_low			1
+range_high			100
+winning_number			9
+error				0
+
+
+2022-07-27 18:43:44,542     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:43:54,164     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				676
+guess				67
+feedback			None
+error				0
+hint_type_id			1
+hint				Nice try!  Hint: It is divisible by 3.
+hint_number			1
+
+
+2022-07-27 18:44:16,699     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				676
+guess				33
+feedback			good
+error				0
+hint_type_id			5
+hint				Nice try!  Hint: It is a perfect square.
+hint_number			2
+
+
+2022-07-27 18:44:54,836     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				676
+guess				9
+feedback			None
+error				0
+
+
+2022-07-27 18:44:54,875     Outcome Record Entered
+
+
+Data:
+
+session_id			339
+game_id				676
+outcome_type_id			1
+play_again			0
+score				60
+
+
+2022-07-27 18:44:54,952     Outcome Record Updated
+
+
+Data:
+
+session_id			339
+game_id				676
+
+
+2022-07-27 18:44:54,955     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:44:55,065     Game Data:
+
+   game_id  session_id  level_of_difficulty_type_id  ... recommendation_type                 time  play_again
+0      676         339                            2  ...        target score  2022-07-27 18:44:54           0
+1      676         339                            2  ...        target score  2022-07-27 18:44:54           0
+2      676         339                            2  ...        target score  2022-07-27 18:44:54           0
+
+[3 rows x 30 columns]
+
+2022-07-27 18:45:01,655     Outcome Record Updated
+
+
+Data:
+
+session_id			339
+game_id				676
+
+
+2022-07-27 18:45:01,658     Play Again
+
+
+
+
+2022-07-27 18:45:14,607     Game Record Entered
+
+
+Data:
+
+session_id			339
+level_of_difficulty_type_id	3
+range_low			1
+range_high			1000
+winning_number			48
+error				0
+
+
+2022-07-27 18:45:14,638     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:22,385     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				677
+guess				748
+feedback			None
+error				0
+hint_type_id			1
+hint				Nice try!  Hint: It is divisible by 12.
+hint_number			1
+
+
+2022-07-27 18:45:32,716     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				677
+guess				144
+feedback			good
+error				0
+hint_type_id			2
+hint				Nice try!  Hint: 48 is a multiple.
+hint_number			2
+
+
+2022-07-27 18:46:11,797     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				677
+guess				96
+feedback			bad
+error				0
+hint_type_id			7
+hint				Nice try!  Hint: The sum of its digits is 12.
+hint_number			3
+
+
+2022-07-27 18:47:03,299     Guess Record Entered
+
+
+Data:
+
+session_id			339
+game_id				677
+guess				363
+feedback			None
+error				0
+
+
+2022-07-27 18:47:03,336     Outcome Record Entered
+
+
+Data:
+
+session_id			339
+game_id				677
+outcome_type_id			2
+play_again			0
+
+
+2022-07-27 18:47:03,409     Outcome Record Updated
+
+
+Data:
+
+session_id			339
+game_id				677
+
+
+2022-07-27 18:47:03,412     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+
+2022-07-27 18:47:03,568     Game Data:
+
+   game_id  session_id  level_of_difficulty_type_id  ... recommendation_type                 time  play_again
+0      677         339                            3  ...                None  2022-07-27 18:47:03           0
+1      677         339                            3  ...                None  2022-07-27 18:47:03           0
+2      677         339                            3  ...                None  2022-07-27 18:47:03           0
+3      677         339                            3  ...                None  2022-07-27 18:47:03           0
+
+[4 rows x 30 columns]
+

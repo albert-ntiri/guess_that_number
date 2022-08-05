@@ -1,0 +1,352 @@
+PageManager:
+
+<PageManager>:
+	id: page_manager
+	welcome_page: welcome_page
+	game_page: game_page
+	farewell_page: farewell_page
+
+	WelcomePage:
+		id: welcome_page
+		name: "welcome_page"
+		manager: page_manager
+	GamePage:
+		id: game_page
+		name: "game_page"
+		manager: page_manager
+	FarewellPage:
+		id: farewell_page
+		name: "farewell_page"
+		manager: page_manager
+
+
+
+<Label>
+	color: (0,0,0,1)
+
+<Button>
+	background_color: (1,1,1,1)
+	bold: True
+	border: (20,20,20,20)
+
+<TextInput>
+	multiline: False
+	halign: "center"
+
+<CheckBox>
+	color: (0,0,0,1)
+
+
+
+<WelcomePage>:
+	low_range: low_range
+	high_range: high_range
+	range_error_msg: range_error_msg
+
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		Label:
+			text: "Guess That Number!"
+			font_size: 52 if root.width > 550 else 36
+			bold: True
+			size_hint: (1, .25 if root.width > 550 else .15)
+			text_size: (root.width - 50, None)
+			shorten: True
+			split_str: " "
+			shorten_from: "right"
+			halign: "center"
+
+			canvas.before:
+				Color:
+					rgba: (0,.4,0,1)
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			color: (1,1,1,1)
+
+		GridLayout:
+			cols: 1
+			size: root.width, root.height
+			padding: 20
+			spacing: 40
+
+			Label:
+				text: "Want to test your math skills?  See how quickly you can guess a number.  Select a level of difficulty, or enter your own range, and then use the hints to guess a number within that range.  The hints are based on mathematical concepts.  The range of numbers and the number of guesses you get depends on the level of difficulty.  Let's play!"
+				font_size: 17 if root.width > 550 else 15
+				text_size: (root.width - 50, None)
+				max_lines: 8
+
+			BoxLayout:
+				orientation: "vertical"
+				spacing: 20
+				size_hint: (1, .4)
+
+				Label:
+					text: "Select a level of difficulty: "
+					font_size: 17 if root.width > 550 else 15
+
+				RelativeLayout:
+
+					RelativeLayout:
+						pos_hint: {"center_x": .25, "center_y": .5}
+
+						Label:
+							text: "Easy"
+							font_size: 17 if root.width > 550 else 15
+							halign: "right"
+							pos_hint: {"center_x": .5, "center_y": 0}
+						CheckBox:
+							id: radiobutton_easy
+							group: "difficulty_level"
+							pos_hint: {"center_x": .59, "center_y": 0}
+							active: True
+							on_active: root.set_level_of_difficulty(self, app, self.active, "easy")
+
+					RelativeLayout:
+						pos_hint: {"center_x": .5, "center_y": .5}
+
+						Label:
+							text: "Medium"
+							font_size: 17 if root.width > 550 else 15
+							halign: "right"
+							pos_hint: {"center_x": .5, "center_y": 0}
+						CheckBox:
+							id: radiobutton_medium
+							group: "difficulty_level"
+							pos_hint: {"center_x": .62, "center_y": 0}
+							on_active: root.set_level_of_difficulty(self, app, self.active, "medium")
+
+					RelativeLayout:
+						pos_hint: {"center_x": .75, "center_y": .5}
+
+						Label:
+							text: "Hard"
+							font_size: 17 if root.width > 550 else 15
+							halign: "right"
+							pos_hint: {"center_x": .5, "center_y": 0}
+						CheckBox:
+							id: radiobutton_hard
+							group: "difficulty_level"
+							pos_hint: {"center_x": .59, "center_y": 0}
+							on_active: root.set_level_of_difficulty(self, app, self.active, "hard")
+
+			Label:
+				text: "OR"
+				font_size: 17 if root.width > 550 else 15
+				size_hint_y: .02
+				bold: True
+
+			BoxLayout:
+				orientation: "vertical"
+				spacing: 20
+				size_hint: (1, .4)
+
+				Label:
+					text: "Enter your own range: "
+					font_size: 17 if root.width > 550 else 15
+
+				FloatLayout:
+
+					FloatLayout:
+						pos_hint: {"center_x": .6, "center_y": .5}
+
+						Label:
+							text: "Low"
+							font_size: 17 if root.width > 550 else 15
+							pos_hint: {"center_x": .2, "center_y": 0}
+						TextInput:
+							id: low_range
+							size_hint_x: .07
+							size_hint_min: (30, 30)
+							size_hint_max_x: 50
+							pos_hint: {"center_x": .3, "center_y": 0}
+
+					FloatLayout:
+						pos_hint: {"center_x": .9, "center_y": .5}
+
+						Label:
+							text: "High"
+							font_size: 17 if root.width > 550 else 15
+							pos_hint: {"center_x": .2, "center_y": 0}
+						TextInput:
+							id: high_range
+							size_hint_x: .07
+							size_hint_min: (30, 30)
+							size_hint_max_x: 50
+							pos_hint: {"center_x": .3, "center_y": 0}
+
+			Label:
+				id: range_error_msg
+				text: ""
+				font_size: 17 if root.width > 550 else 15
+				color: (1,0,0,.8)
+				bold: True
+				size_hint: (1, .2)
+
+		GridLayout:
+			cols: 1
+			size_hint: (.25, .2 if root.width > 550 else .15)
+			pos_hint: {"center_x": .5}
+			padding: (0, 10)
+
+			Button:
+				text: "PLAY"
+				font_size: 36 if root.width > 550 else 28
+				size_hint_min_x: 100
+				on_release: root.start_game(app)
+
+
+
+<GamePage>:
+	guess_prompt_text: guess_prompt_text
+	status_text: status_text
+	guess: guess
+	hint_text: hint_text
+
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		Label:
+			text: "Guess That Number!"
+			font_size: 52 if root.width > 550 else 36
+			bold: True
+			size_hint: (1, .25)
+			text_size: (root.width - 50, None)
+			shorten: True
+			split_str: " "
+			shorten_from: "right"
+			halign: "center"
+
+			canvas.before:
+				Color:
+					rgba: (0,.4,0,1)
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			color: (1,1,1,1)
+
+		BoxLayout:
+			orientation: "vertical"
+			size: root.width, root.height
+
+			BoxLayout:
+				orientation: "vertical"
+				pos_hint: {"center_x": .82 if root.width > 550 else .75}
+				size_hint_y: .4
+
+				Label:
+					id: status_text
+					font_size: 17 if root.width > 550 else 15
+					text: ""
+					halign: "right"
+					color: (1,0,0,.8)
+					bold: True
+
+			Label:
+				id: guess_prompt_text
+				font_size: 17 if root.width > 550 else 15
+				text: ""
+
+			FloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .5}
+
+				Label:
+					text: "Enter a number: "
+					font_size: 17 if root.width > 550 else 15
+					pos_hint: {"center_x": .45, "center_y": .5}
+				TextInput:
+					id: guess
+					size_hint: (.5, .25) if root.width > 550 else (.2, .22)
+					size_hint_min_x: 20
+					size_hint_max_x: 40
+					pos_hint: {"center_x": .62, "center_y": .5}
+
+			Label:
+				id: hint_text
+				text: ""
+				font_size: 17 if root.width > 550 else 15
+				text_size: (750, None)
+				halign: "center"
+				color: (1,0,0,.8)
+				bold: True
+
+		GridLayout:
+			cols: 2
+			size_hint: (.5, .2 if root.width > 550 else .15)
+			pos_hint: {"center_x": .5}
+			padding: (0, 10)
+			spacing: 50 if root.width > 550 else 25
+
+			Button:
+				text: "ENTER"
+				font_size: 36 if root.width > 550 else 28
+				size_hint_min_x: 100
+				on_release: root.check_answer(app)
+			Button:
+				text: "QUIT"
+				font_size: 36 if root.width > 550 else 28
+				size_hint_min_x: 100
+				on_release: root.end_game(app, "quit")
+
+
+
+<FarewellPage>:
+	last_msg: last_msg
+	feedback_text: feedback_text
+
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		Label:
+			text: "Guess That Number!"
+			font_size: 52 if root.width > 550 else 36
+			bold: True
+			size_hint: (1, .25)
+			text_size: (root.width - 50, None)
+			shorten: True
+			split_str: " "
+			shorten_from: "right"
+			halign: "center"
+
+			canvas.before:
+				Color:
+					rgba: (0,.4,0,1)
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			color: (1,1,1,1)
+
+		GridLayout:
+			cols: 1
+			size: root.width, root.height
+
+			Label:
+				id: last_msg
+				text: ""
+				font_size: 17 if root.width > 550 else 15
+				text_size: (750, None)
+				halign: "center"
+
+			Label:
+				id: feedback_text
+				text: ""
+				font_size: 17 if root.width > 550 else 15
+				text_size: (root.width - 50, None)
+				halign: "left"
+				color: (.3,0,.9,1)
+
+		GridLayout:
+			cols: 1
+			size_hint: (.4, .2 if root.width > 550 else .15)
+			pos_hint: {"center_x": .5}
+			padding: (0, 10)
+
+			Button:
+				text: "PLAY AGAIN"
+				font_size: 36 if root.width > 550 else 28
+				size_hint_min_x: 200
+				on_release: root.play_again(app)

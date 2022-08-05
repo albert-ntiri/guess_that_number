@@ -1,0 +1,143 @@
+2022-07-27 18:41:47,051     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,051     LOG NAME: Class Log
+
+
+2022-07-27 18:41:47,061     New Object	Class: GuessThatNumberGame				Instantiator: GuessThatNumberGame
+
+2022-07-27 18:41:47,061     New Object	Class: ObjectManager	Object: objects			Instantiator: GuessThatNumberGame
+
+2022-07-27 18:41:47,061     New Object	Class: LogFactory	Object: logs			Instantiator: ObjectManager
+
+2022-07-27 18:41:47,061     New Object	Class: Number		Object: numbers			Instantiator: ObjectManager
+
+2022-07-27 18:41:47,090     New Object	Class: TextManager	Object: text			Instantiator: ObjectManager
+
+2022-07-27 18:41:47,091     New Object	Class: DataManager	Object: data			Instantiator: ObjectManager
+
+2022-07-27 18:41:47,092     New Object	Class: DBManager	Object: db_manager		Instantiator: ObjectManager
+
+2022-07-27 18:41:47,128     New Object	Class: Session		Object: session			Instantiator: ObjectManager
+
+2022-07-27 18:41:47,154     New Object	Class: UserMetricsManager	Object: user_metrics		Instantiator: AnalyticsManager
+
+2022-07-27 18:42:27,535     New Object	Class: DataCompiler	Object: data_compiler		Instantiator: AnalyticsManager
+
+2022-07-27 18:42:27,552     New Object	Class: Model		Object: score_predict_model	Instantiator: ScorePredictor
+
+2022-07-27 18:42:27,794     New Object	Class: ScorePredictor	Object: score_predictor		Instantiator: AnalyticsManager
+
+2022-07-27 18:42:27,817     New Object	Class: Model		Object: outcome_predict_model	Instantiator: OutcomePredictor
+
+2022-07-27 18:42:27,893     New Object	Class: OutcomePredictor	Object: outcome_predictor	Instantiator: AnalyticsManager
+
+2022-07-27 18:42:27,893     New Object	Class: AnalyticsManager	Object: analytics		Instantiator: ObjectManager
+
+2022-07-27 18:42:27,897     New Object	Class: GamesManager	Object: games			Instantiator: GuessThatNumberGame
+
+2022-07-27 18:42:27,910     New Object	Class: WelcomePage	Object: welcome_page		Instantiator: GuessThatNumberGame
+
+2022-07-27 18:42:27,917     New Object	Class: GamePage		Object: game_page		Instantiator: GuessThatNumberGame
+
+2022-07-27 18:42:27,920     New Object	Class: FarewellPage	Object: farewell_page		Instantiator: GuessThatNumberGame
+
+2022-07-27 18:43:20,313     New Object	Class: KivyVariableManager	Object: variables		Instantiator: TextDisplayManager
+
+2022-07-27 18:43:20,314     New Object	Class: TextDisplayManager	Object: text_display		Instantiator: WelcomePage
+
+2022-07-27 18:43:20,314     New Object	Class: GameSettings	Object: settings		Instantiator: Game
+
+2022-07-27 18:43:20,315     New Object	Class: GameStatsManager	Object: stats			Instantiator: Game
+
+2022-07-27 18:43:20,315     New Object	Class: HintManager	Object: hints			Instantiator: Game
+
+2022-07-27 18:43:20,315     New Object	Class: GuessManager	Object: guesses			Instantiator: Game
+
+2022-07-27 18:43:20,326     New Object	Class: FeedbackManager	Object: feedback		Instantiator: Game
+
+2022-07-27 18:43:20,326     New Object	Class: Game		Object: current_game		Instantiator: GamesManager
+
+2022-07-27 18:43:20,406     New Object	Class: ConceptManager	Object: game_concepts		Instantiator: HintManager
+
+2022-07-27 18:43:20,413     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:29,995     New Object	Class: CorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:43:30,094     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,374     Play Again
+
+
+
+
+2022-07-27 18:43:44,450     New Object	Class: GameSettings	Object: settings		Instantiator: Game
+
+2022-07-27 18:43:44,450     New Object	Class: GameStatsManager	Object: stats			Instantiator: Game
+
+2022-07-27 18:43:44,451     New Object	Class: HintManager	Object: hints			Instantiator: Game
+
+2022-07-27 18:43:44,451     New Object	Class: GuessManager	Object: guesses			Instantiator: Game
+
+2022-07-27 18:43:44,462     New Object	Class: FeedbackManager	Object: feedback		Instantiator: Game
+
+2022-07-27 18:43:44,462     New Object	Class: Game		Object: current_game		Instantiator: GamesManager
+
+2022-07-27 18:43:44,535     New Object	Class: ConceptManager	Object: game_concepts		Instantiator: HintManager
+
+2022-07-27 18:43:44,542     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:43:54,121     New Object	Class: IncorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:44:16,613     New Object	Class: IncorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:44:54,791     New Object	Class: CorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:44:54,955     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,658     Play Again
+
+
+
+
+2022-07-27 18:45:14,543     New Object	Class: GameSettings	Object: settings		Instantiator: Game
+
+2022-07-27 18:45:14,544     New Object	Class: GameStatsManager	Object: stats			Instantiator: Game
+
+2022-07-27 18:45:14,544     New Object	Class: HintManager	Object: hints			Instantiator: Game
+
+2022-07-27 18:45:14,545     New Object	Class: GuessManager	Object: guesses			Instantiator: Game
+
+2022-07-27 18:45:14,555     New Object	Class: FeedbackManager	Object: feedback		Instantiator: Game
+
+2022-07-27 18:45:14,555     New Object	Class: Game		Object: current_game		Instantiator: GamesManager
+
+2022-07-27 18:45:14,631     New Object	Class: ConceptManager	Object: game_concepts		Instantiator: HintManager
+
+2022-07-27 18:45:14,638     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:22,338     New Object	Class: IncorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:45:32,638     New Object	Class: IncorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:46:11,715     New Object	Class: IncorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:47:03,251     New Object	Class: IncorrectGuess	Object: guess_obj		Instantiator: GuessManager
+
+2022-07-27 18:47:03,412     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+

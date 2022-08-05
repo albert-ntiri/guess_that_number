@@ -1,0 +1,102 @@
+2022-07-27 18:41:47,059     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,059     LOG NAME: Metrics Log
+
+
+2022-07-27 18:43:20,414     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:30,093     Win Game Percentage		Meets Criteria - True
+
+Games Won		1
+Games Played		1
+
+2022-07-27 18:43:30,094     Win Game Percentage		1.0
+
+2022-07-27 18:43:30,095     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,375     Play Again
+
+
+
+
+2022-07-27 18:43:44,543     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:44:16,615     Hint Chess Score		Meets Criteria - True
+
+Percent Hints Captured		0.2857142857142857
+Hints Given		1
+
+2022-07-27 18:44:16,615     Hint Chess Score		0.2857142857142857
+
+2022-07-27 18:44:54,953     Hint Chess Score		Meets Criteria - True
+
+Percent Hints Captured		0.42857142857142855
+Hints Given		2
+
+2022-07-27 18:44:54,954     Hint Chess Score		0.21428571428571427
+
+2022-07-27 18:44:54,954     Win Game Percentage		Meets Criteria - True
+
+Games Won		2
+Games Played		2
+
+2022-07-27 18:44:54,954     Win Game Percentage		1.0
+
+2022-07-27 18:44:54,956     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,659     Play Again
+
+
+
+
+2022-07-27 18:45:14,639     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:32,639     Hint Chess Score		Meets Criteria - True
+
+Percent Hints Captured		0.2631578947368421
+Hints Given		1
+Previous Values		[0.21428571428571427]
+
+2022-07-27 18:45:32,640     Hint Chess Score		0.23872180451127817
+
+2022-07-27 18:46:11,716     Hint Chess Score		Meets Criteria - True
+
+Percent Hints Captured		0.7368421052631579
+Hints Given		2
+Previous Values		[0.21428571428571427]
+
+2022-07-27 18:46:11,717     Hint Chess Score		0.2913533834586466
+
+2022-07-27 18:47:03,411     Hint Chess Score		Meets Criteria - True
+
+Percent Hints Captured		0.8947368421052632
+Hints Given		3
+Previous Values		[0.21428571428571427]
+
+2022-07-27 18:47:03,411     Hint Chess Score		0.2982456140350877
+
+2022-07-27 18:47:03,411     Win Game Percentage		Meets Criteria - True
+
+Games Won		2
+Games Played		3
+
+2022-07-27 18:47:03,412     Win Game Percentage		0.6666666666666666
+
+2022-07-27 18:47:03,413     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+

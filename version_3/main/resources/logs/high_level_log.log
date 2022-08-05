@@ -1,0 +1,59 @@
+2022-07-27 18:41:47,049     **************************************** NEW SESSION ****************************************
+
+
+
+2022-07-27 18:41:47,049     LOG NAME: Main Log
+
+
+2022-07-27 18:43:20,412     NEW GAME		Level: Easy	Range: (1, 10)		Winning Number: 8
+
+2022-07-27 18:43:30,026     Guess #1		Guess: 8
+
+2022-07-27 18:43:30,094     Game Ended		Outcome: Win	Score: 100
+
+2022-07-27 18:43:39,374     Play Again
+
+
+
+
+2022-07-27 18:43:44,542     NEW GAME		Level: Medium	Range: (1, 100)		Winning Number: 9
+
+2022-07-27 18:43:54,166     Guess #1		Guess: 67	Hint: Nice try!  Hint: It is divisible by 3.
+
+2022-07-27 18:44:16,701     Guess #2		Guess: 33	Hint: Nice try!  Hint: It is a perfect square.
+
+2022-07-27 18:44:54,837     Guess #3		Guess: 9
+
+2022-07-27 18:44:54,955     Game Ended		Outcome: Win	Score: 60
+
+
+Recommended target score for your next game: 66.
+
+
+2022-07-27 18:45:01,657     Play Again
+
+
+
+
+2022-07-27 18:45:14,637     NEW GAME		Level: Hard	Range: (1, 1000)	Winning Number: 48
+
+2022-07-27 18:45:22,386     Guess #1		Guess: 748	Hint: Nice try!  Hint: It is divisible by 12.
+
+2022-07-27 18:45:32,717     Guess #2		Guess: 144	Hint: Nice try!  Hint: 48 is a multiple.
+
+2022-07-27 18:46:11,799     Guess #3		Guess: 96	Hint: Nice try!  Hint: The sum of its digits is 12.
+
+2022-07-27 18:47:03,299     Guess #4		Guess: 363
+
+2022-07-27 18:47:03,412     Game Ended		Outcome: Lose
+
+
+Feedback:
+Some of your guesses did not match the hints.  For example: multiples.
+
+Your guess, 96, did not match the hint: "Nice try!  Hint: 48 is a multiple."
+
+Remember:
+Multiple: The result of multiplying a number by an integer (not by a fraction).
+
+
