@@ -12,9 +12,9 @@ Here are the relevant files for this application:
 - [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
 
 **VERSIONS**
-- [**VERSION 1**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1): Version 1 is the proof of concept that implements the basic functionality and UI design, using Tkinter.
-- [**VERSION 2**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2): Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using Kivy for the UI, in place of Tkinter, for the ability to work on mobile platforms.
-- [**VERSION 3**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main): Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
+- [**version 1**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1): Version 1 is the proof of concept that implements the basic functionality and UI design, using Tkinter.
+- [**version 2**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2): Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using Kivy for the UI, in place of Tkinter, for the ability to work on mobile platforms.
+- [**version 3**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main): Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
 
 ## Application Structure
 This application has 3 pages:
