@@ -22,6 +22,9 @@ Here are the relevant files for this application:
 - [**database_create_db.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/database_create_db.py): This file contains the SQL query for creating the database used for version 2 of the application.  There are also other database-related files for populating the database.
 - [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/images): This folder contains screenshots of version 2 of the application.
 
+**VERSION 3**
+- [**main**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main): Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
+
 ## Application Structure
 This application has 3 pages:
 - **Welcome Page**: This is the landing page for the application.  It consists of a description of the game, options for selecting a level of difficulty or inputting a custom range, and a play button to start the game.
