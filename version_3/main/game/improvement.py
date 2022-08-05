@@ -76,7 +76,6 @@ class Improvement:
     def _get_imp_area_display_name(self):
         imp_area = self._imp_area_obj.get_name()
         return self._hints_obj.get_feedback_display_name(imp_area)
-        # return self._imp_area_obj.get_feedback_display_name() if isinstance(self._imp_area_obj, FeedbackHintType) else ""
     
     def _get_ranked_improvement_areas(self, current=True):
         df = self._feedback._feedback.copy() if current else self._games.get_aggregate_feedback()
