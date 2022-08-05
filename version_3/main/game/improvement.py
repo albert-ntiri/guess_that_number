@@ -26,8 +26,9 @@ class Improvement:
         self._feedback = self._objects.get_object("feedback")
         self._logs = self._objects.get_object("logs")
         
+        self._hints_obj = hints_obj
         self._top_improvement_area = self._get_top_improvement_area()
-        self._imp_area_obj = hints_obj.get_hint_obj_from_hint_type(self._top_improvement_area)
+        self._imp_area_obj = self._hints_obj.get_hint_obj_from_hint_type(self._top_improvement_area)
     
     def get_feedback(self):
         """This method gets the different components of user feedback and returns the overall message."""
@@ -38,6 +39,7 @@ class Improvement:
         return feedback
     
     def _get_all_feedback_parts(self):
+        imp_area_display_name = self._imp_area_obj.get_feedback_display_name() if isinstance(self._imp_area_obj, FeedbackHintType) else ""
         general_feedback = self._get_feedback_component("general", self._get_imp_area_display_name())
         
         examples = self._get_examples()
@@ -72,7 +74,9 @@ class Improvement:
         return top_improvement_area
     
     def _get_imp_area_display_name(self):
-        return self._imp_area_obj.get_feedback_display_name() if isinstance(self._imp_area_obj, FeedbackHintType) else ""
+        imp_area = self._imp_area_obj.get_name()
+        return self._hints_obj.get_feedback_display_name(imp_area)
+        # return self._imp_area_obj.get_feedback_display_name() if isinstance(self._imp_area_obj, FeedbackHintType) else ""
     
     def _get_ranked_improvement_areas(self, current=True):
         df = self._feedback._feedback.copy() if current else self._games.get_aggregate_feedback()

@@ -291,6 +291,21 @@ class HintTypes(Manager):
             if match:
                 return hint_obj
     
+    def get_feedback_display_name(self, hint_type):
+        feedback_display_names = {
+            "factor": "factors",
+            "multiple": "multiples",
+            "prime": "prime numbers",
+            "even_odd": "even/odd numbers",
+            "perfect_square": "perfect squares",
+            "digit_sum": "digit sums",
+            "digit_length": "n-digit numbers",
+            }
+        try:
+            return feedback_display_names[hint_type]
+        except KeyError:
+            return ""
+    
     def _create_hint_obj(self, hint_class, hint_type, i, hint_display_name, feedback_display_name=None):
         main_hint = self._text.get_text(hint_type)
         description = self._text.get_hint_description(hint_type)

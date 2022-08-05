@@ -137,15 +137,6 @@ def test_get_improvement_area_id_too_many_arguments_raises_error(improvement_cop
 
 
 # Test _get_imp_area_display_name method
-def test_get_imp_area_display_name_correct_object_type(improvement_copy):
-    assert True == isinstance(improvement_copy._imp_area_obj, FeedbackHintType)
-
-def test_get_imp_area_display_name_correct_feedback_display_name(improvement_copy):
-    assert "multiples" == improvement_copy._imp_area_obj.get_feedback_display_name()
-
-def test_get_imp_area_display_name_raw_form(improvement_copy):
-    assert "multiples" == improvement_copy._imp_area_obj.get_feedback_display_name() if isinstance(improvement_copy._imp_area_obj, FeedbackHintType) else ""
-
 def test_get_imp_area_display_name_one_game(improvement_copy):
     assert "multiples" == improvement_copy._get_imp_area_display_name()
 
@@ -158,12 +149,81 @@ def test_get_imp_area_display_name_too_many_arguments_raises_error(improvement_c
 
 
 # Test _get_examples method
+def test_get_examples_one_game(improvement_copy):
+    expected_examples = [["3", "Nice try!  Hint: 2 is a multiple."], ["5", "Nice try!  Hint: 3 is a multiple."]]
+    assert expected_examples == improvement_copy._get_examples()
+
+def test_get_examples_multiple_games(improvement_copy_multiple_games):
+    expected_examples = [["6", "Nice try!  Hint: It is a perfect square."]]
+    assert expected_examples == improvement_copy_multiple_games._get_examples()
+
+def test_get_examples_too_many_arguments_raises_error(improvement_copy):
+    with pytest.raises(TypeError):
+        improvement_copy._get_examples("extra")
 
 
 # Test _get_all_feedback_parts method
+def test_get_all_feedback_parts_one_game(improvement_copy):
+    general_feedback = "Feedback:\nSome of your guesses did not match the hints.  For example: multiples."
+    
+    example_feedback1 = 'Your guess, 3, did not match the hint: "Nice try!  Hint: 2 is a multiple."'
+    example_feedback2 = 'Your guess, 5, did not match the hint: "Nice try!  Hint: 3 is a multiple."'
+    example_feedback = example_feedback1 + "\n" + example_feedback2
+    
+    imp_area_desc = "Multiple: The\xa0result\xa0of\xa0multiplying a number by an integer (not by a fraction)."
+    description_feedback = f"Remember:\n{imp_area_desc}"
+    
+    feedback_parts = (general_feedback, example_feedback, description_feedback)
+    
+    assert feedback_parts == improvement_copy._get_all_feedback_parts()
+
+def test_get_all_feedback_parts_multiple_games(improvement_copy_multiple_games):
+    general_feedback = "Feedback:\nSome of your guesses did not match the hints.  For example: perfect squares."
+    
+    example_feedback = 'Your guess, 6, did not match the hint: "Nice try!  Hint: It is a perfect square."'
+    
+    imp_area_desc = "Perfect Square: Any number that is the square of a rational number. For example, 0, 1, 4, 9, 16, 25, etc. are all perfect squares. So are and ."
+    description_feedback = f"Remember:\n{imp_area_desc}"
+    
+    feedback_parts = (general_feedback, example_feedback, description_feedback)
+    
+    assert feedback_parts == improvement_copy_multiple_games._get_all_feedback_parts()
+
+def test_get_all_feedback_parts_too_many_arguments_raises_error(improvement_copy):
+    with pytest.raises(TypeError):
+        improvement_copy._get_all_feedback_parts("extra")
 
 
 # Test get_feedback method
+def test_get_feedback_one_game(improvement_copy):
+    general_feedback = "Feedback:\nSome of your guesses did not match the hints.  For example: multiples."
+    
+    example_feedback1 = 'Your guess, 3, did not match the hint: "Nice try!  Hint: 2 is a multiple."'
+    example_feedback2 = 'Your guess, 5, did not match the hint: "Nice try!  Hint: 3 is a multiple."'
+    example_feedback = example_feedback1 + "\n" + example_feedback2
+    
+    imp_area_desc = "Multiple: The\xa0result\xa0of\xa0multiplying a number by an integer (not by a fraction)."
+    description_feedback = f"Remember:\n{imp_area_desc}"
+    
+    expected_feedback = general_feedback + "\n\n" + example_feedback + "\n\n" + description_feedback
+    
+    assert expected_feedback == improvement_copy.get_feedback()
+
+def test_get_feedback_multiple_games(improvement_copy_multiple_games):
+    general_feedback = "Feedback:\nSome of your guesses did not match the hints.  For example: perfect squares."
+    
+    example_feedback = 'Your guess, 6, did not match the hint: "Nice try!  Hint: It is a perfect square."'
+    
+    imp_area_desc = "Perfect Square: Any number that is the square of a rational number. For example, 0, 1, 4, 9, 16, 25, etc. are all perfect squares. So are and ."
+    description_feedback = f"Remember:\n{imp_area_desc}"
+    
+    expected_feedback = general_feedback + "\n\n" + example_feedback + "\n\n" + description_feedback
+    
+    assert expected_feedback == improvement_copy_multiple_games.get_feedback()
+
+def test_get_feedback_too_many_arguments_raises_error(improvement_copy):
+    with pytest.raises(TypeError):
+        improvement_copy.get_feedback("extra")
 
 
 

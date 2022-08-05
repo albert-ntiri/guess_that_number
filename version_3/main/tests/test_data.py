@@ -477,6 +477,32 @@ def test_get_hint_obj_from_hint_too_many_arguments_raises_error(hints, digit_len
         hints.get_hint_obj_from_hint(digit_length_main_hint, "extra")
 
 
+# Test get_feedback_display_name method
+feedback_display_names = [
+    ("factor", "factors"),
+    ("multiple", "multiples"),
+    ("prime", "prime numbers"),
+    ("even_odd", "even/odd numbers"),
+    ("perfect_square", "perfect squares"),
+    ("perfect_cube", ""),
+    ("digit_sum", "digit sums"),
+    ("digit_length", "n-digit numbers"),
+    ("greater_less", "")
+    ]
+
+@pytest.mark.parametrize("hint_type, display_name", feedback_display_names)
+def test_get_feedback_display_name(hints, hint_type, display_name):
+    assert display_name == hints.get_feedback_display_name(hint_type)
+
+def test_get_feedback_display_name_no_arguments_raises_error(hints):
+    with pytest.raises(TypeError):
+        hints.get_feedback_display_name()
+
+def test_get_feedback_display_name_too_many_arguments_raises_error(hints):
+    with pytest.raises(TypeError):
+        hints.get_feedback_display_name("factor", "extra")
+
+
 # Test get_category method
 def test_get_category_hint_types(hints):
     assert "hints" == hints.get_category()
