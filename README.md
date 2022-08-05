@@ -11,19 +11,10 @@ Guess That Number is a game I built in Python.  The original version uses the Tk
 Here are the relevant files for this application:
 - [**README**](https://github.com/albert-ntiri/guess_that_number/blob/main/README.md): This file contains a high-level walkthrough of the project.
 
-**VERSION 1**
-- [**Guess_That_Number.ipynb**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.ipynb): This file contains the code for version 1 of the application.  It is written in Jupyter Notebook.
-- [**Guess_That_Number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/Guess_That_Number.py): This is the .py file for version 1 of the application, which was used to create an executable.
-- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1/images): This folder contains screenshots of version 1 of the application.
-
-**VERSION 2**
-- [**guess_that_number.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number.py): This is the main .py file for version 2 with the code to create the UI and logic to run the game.  There are also several other files with supporting classes.
-- [**guess_that_number_design.kv**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/guess_that_number_design.kv): This is the design file for version 2, written in the Kivy language, to define the widgets on each page and their layout.
-- [**database_create_db.py**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/database_create_db.py): This file contains the SQL query for creating the database used for version 2 of the application.  There are also other database-related files for populating the database.
-- [**images**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2/images): This folder contains screenshots of version 2 of the application.
-
-**VERSION 3**
-- [**main**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main): Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
+**VERSIONS**
+- [**VERSION 1**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_1): Version 1 is the proof of concept that implements the basic functionality and UI design, using Tkinter.
+- [**VERSION 2**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_2): Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using Kivy for the UI, in place of Tkinter, for the ability to work on mobile platforms.
+- [**VERSION 3**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main): Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
 
 ## Application Structure
 This application has 3 pages:
