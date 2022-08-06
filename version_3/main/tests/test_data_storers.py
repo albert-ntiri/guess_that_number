@@ -449,6 +449,44 @@ def test_update_db_table_play_again_update_too_many_arguments_raises_error(play_
 
 
 
+### FeedbackUpdate Tests
+
+@pytest.fixture
+def feedback_update_copy_improvement(session_fake, sqlite_db_fake, test_db_path):
+    for table in ["game", "outcome"]:
+        sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
+    session_fake.update_database("game", {"settings": settings, "error": False, "error_type": None})
+    data = session_fake._objects.get_object("data")
+    outcome_obj = data.get_sub_data_object("outcomes", "lose")
+    outcome_query = "INSERT INTO outcome(game_id, session_id, outcome_type_id, play_again) VALUES (1, 1, 2, 0);"
+    sqlite_db_fake.run_query(outcome_query, _db_path=test_db_path)
+    feedback_update = FeedbackUpdate(session_fake, feedback_type="improvement", improvement_area_id=2)
+    yield feedback_update
+    feedback_update._parameters.clear()
+
+
+# Test _set_parameters method
+def test_set_parameters_improvement(feedback_update_copy_improvement):
+    assert ("improvement_area_id", 2) == feedback_update_copy_improvement._set_parameters()
+
+def test_set_parameters_feedback_update_too_many_arguments_raises_error(feedback_update_copy_improvement):
+    with pytest.raises(TypeError):
+        feedback_update_copy_improvement._set_parameters("extra")
+
+
+# Test update_db_table method
+def test_update_db_table_feedback_update_improvement(feedback_update_copy_improvement, sqlite_db_fake, test_db_path):
+    feedback_update_copy_improvement.update_db_table()
+    outcome_table_query = "SELECT game_id, session_id, outcome_type_id, feedback_type, improvement_area_id FROM outcome WHERE outcome_id = 1;"
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 2, "improvement", 2)] == db_entry
+
+def test_update_db_table_feedback_update_too_many_arguments_raises_error(feedback_update_copy_improvement):
+    with pytest.raises(TypeError):
+        feedback_update_copy_improvement.update_db_table("extra")
+
+
+
 ### OutcomeStorageManager Tests
 
 @pytest.fixture
@@ -499,6 +537,18 @@ def test_update_outcome_record_in_db_play_again(outcome_storage_manager_copy, sq
     db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
     assert [(1, 1, 2, 1)] == db_entry
 
+def test_update_outcome_record_in_db_feedback_improvement(outcome_storage_manager_copy, sqlite_db_fake, test_db_path):
+    data = outcome_storage_manager_copy._objects.get_object("data")
+    outcome_obj = data.get_sub_data_object("outcomes", "lose")
+    db_update_params_new = {"outcome_obj": outcome_obj}
+    outcome_storage_manager_copy._add_outcome_record_to_db(db_update_params_new)
+    db_update_params_update = {"update_type": "feedback", "feedback_type": "improvement", "improvement_area_id": 2,
+                               "recommendation_type": None}
+    outcome_storage_manager_copy._update_outcome_record_in_db(db_update_params_update)
+    outcome_table_query = "SELECT game_id, session_id, outcome_type_id, feedback_type, improvement_area_id FROM outcome WHERE outcome_id = 1;"
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 2, "improvement", 2)] == db_entry
+
 def test_add_outcome_record_to_db_outcome_no_arguments_raises_error(outcome_storage_manager_copy):
     with pytest.raises(TypeError):
         outcome_storage_manager_copy._update_outcome_record_in_db()
@@ -538,6 +588,18 @@ def test_update_database_outcome_update_play_again(outcome_storage_manager_copy,
     outcome_table_query = "SELECT game_id, session_id, outcome_type_id, play_again FROM outcome WHERE outcome_id = 1;"
     db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
     assert [(1, 1, 2, 1)] == db_entry
+
+def test_update_database_outcome_update_feedback_improvement(outcome_storage_manager_copy, sqlite_db_fake, test_db_path):
+    data = outcome_storage_manager_copy._objects.get_object("data")
+    outcome_obj = data.get_sub_data_object("outcomes", "lose")
+    db_update_params_new = {"entry_type": "New", "outcome_obj": outcome_obj}
+    outcome_storage_manager_copy.update_database(db_update_params_new)
+    db_update_params_update = {"entry_type": "Updated", "update_type": "feedback", "feedback_type": "improvement",
+                               "improvement_area_id": 2, "recommendation_type": None}
+    outcome_storage_manager_copy.update_database(db_update_params_update)
+    outcome_table_query = "SELECT game_id, session_id, outcome_type_id, feedback_type, improvement_area_id FROM outcome WHERE outcome_id = 1;"
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 2, "improvement", 2)] == db_entry
 
 def test_update_database_outcome_no_arguments_raises_error(outcome_storage_manager_copy):
     with pytest.raises(TypeError):

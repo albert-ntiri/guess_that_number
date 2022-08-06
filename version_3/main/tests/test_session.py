@@ -168,6 +168,22 @@ def test_update_database_outcome_update_play_again(session_fake, sqlite_db_fake,
     db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
     assert [(1, 1, 2, 1)] == db_entry
 
+def test_update_database_outcome_update_feedback_improvement(session_fake, sqlite_db_fake, test_db_path):
+    for table in ["game", "outcome"]:
+        sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
+    start_game_params = {"settings": settings, "error": False, "error_type": None}
+    session_fake.update_database("game", start_game_params)
+    data = session_fake._objects.get_object("data")
+    outcome_obj = data.get_sub_data_object("outcomes", "lose")
+    db_update_params_new = {"entry_type": "New", "outcome_obj": outcome_obj}
+    session_fake.update_database("outcome", db_update_params_new)
+    db_update_params_update = {"entry_type": "Updated", "update_type": "feedback", "feedback_type": "improvement",
+                               "improvement_area_id": 2, "recommendation_type": None}
+    session_fake.update_database("outcome", db_update_params_update)
+    outcome_table_query = "SELECT game_id, session_id, outcome_type_id, feedback_type, improvement_area_id FROM outcome WHERE outcome_id = 1;"
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 2, "improvement", 2)] == db_entry
+
 def test_update_database_no_arguments_raises_error(session_fake):
     with pytest.raises(TypeError):
         session_fake.update_database()
