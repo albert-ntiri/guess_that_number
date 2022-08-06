@@ -15,9 +15,9 @@ Here are the relevant files for this application:
 - [**Current Code Base**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main)
 
 **VERSIONS**
-- VERSION 1: Version 1 is the proof of concept that implements the basic functionality and UI design, using [Tkinter](https://docs.python.org/3/library/tkinter.html).
-- VERSION 2: Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using [Kivy](https://kivy.org/#home) for the UI, in place of [Tkinter](https://docs.python.org/3/library/tkinter.html), for the ability to work on mobile platforms.
-- VERSION 3: Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
+- *VERSION 1*: Version 1 is the proof of concept that implements the basic functionality and UI design, using [Tkinter](https://docs.python.org/3/library/tkinter.html).
+- **VERSION 2**: Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using [Kivy](https://kivy.org/#home) for the UI, in place of [Tkinter](https://docs.python.org/3/library/tkinter.html), for the ability to work on mobile platforms.
+- ***VERSION 3***: Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
 
 ## Application Structure
 This application has 3 pages:
