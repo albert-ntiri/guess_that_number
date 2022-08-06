@@ -126,12 +126,6 @@ class Session:
         
         return game_id
     
-    # def _process_update(self, db_update_obj, record_type, entry_type):
-    #     db_update_obj.update_db_table()
-    #     if self._logs:
-    #         db_record_log_entry = DBRecordLogEntry(self._logs, record_type, entry_type, db_update_obj.get_parameters())
-    #         db_record_log_entry.add_log_entry("database")
-    
     @staticmethod
     def build_query(target_col, table, filter_col=None, filter_val=None):
         query = "SELECT " + target_col + " FROM " + table
