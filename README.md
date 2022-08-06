@@ -1,7 +1,7 @@
 # Guess That Number
 
 ## Overview
-Guess That Number is a game I built in Python.  The original version uses the Tkinter library, while the updated version uses Kivy.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.  It also provides feedback and recommendations based on the user's performance.
+Guess That Number is a game I built in Python.  The object of the game is to guess a number between a specific range in as few tries as possible, using the hints given.  It has 3 levels of difficulty and an ability to set a custom range if the user chooses.  It also provides feedback and recommendations based on the user's performance.
 
 <p align='center'>
   <img src='version_2/images/demo.gif' alt='demo' width='600'/>
@@ -15,8 +15,8 @@ Here are the relevant files for this application:
 - [**Current Code Base**](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/main)
 
 **VERSIONS**
-- VERSION 1: Version 1 is the proof of concept that implements the basic functionality and UI design, using Tkinter.
-- VERSION 2: Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using Kivy for the UI, in place of Tkinter, for the ability to work on mobile platforms.
+- VERSION 1: Version 1 is the proof of concept that implements the basic functionality and UI design, using [Tkinter](https://docs.python.org/3/library/tkinter.html).
+- VERSION 2: Version 2 adds a database and machine learning to implement recommendations based on predicted scores and outcomes, as well as using [Kivy](https://kivy.org/#home) for the UI, in place of [Tkinter](https://docs.python.org/3/library/tkinter.html), for the ability to work on mobile platforms.
 - VERSION 3: Version 3 refactors the code to implement SOLID principles and design patterns to improve the design and make it more flexible.
 
 ## Application Structure
