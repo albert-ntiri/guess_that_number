@@ -12,7 +12,10 @@ import pandas as pd
 
 @pytest.fixture
 def games_manager_copy():
-    return GamesManager(objects_fake_global_dict["easy"])
+    objects = objects_fake_global_dict["game_level"]
+    games_manager = objects.get_object("games")
+    yield games_manager
+    games_manager._games = []
 
 
 # Test add_game method
@@ -64,6 +67,40 @@ def test_add_guess_to_current_game_too_many_arguments_raises_error(games_manager
 
 
 # Test end_current_game method
+def test_summarize_game_win_end_game_message(games_manager_copy):
+    games_manager_copy.add_game()
+    stats = games_manager_copy._objects.get_object("stats")
+    stats._score.value = 80
+    
+    games_manager_copy.end_current_game("win")
+    
+    text_display = games_manager_copy._objects.get_object("text_display")
+    expected_text = "That's correct! Congratulations! You are a winner!!!\n\nYour Score: 80\n\n\nThanks for playing! Please come back soon."
+    assert expected_text == text_display._variables.get_variable_text("last_msg")
+
+def test_summarize_game_lose_end_game_message(games_manager_copy):
+    games_manager_copy.add_game()
+    games_manager_copy.end_current_game("lose")
+    
+    text_display = games_manager_copy._objects.get_object("text_display")
+    expected_text = "I'm sorry! You ran out of tries.\n\nThanks for playing! Please come back soon."
+    assert expected_text == text_display._variables.get_variable_text("last_msg")
+
+def test_summarize_game_quit_message(games_manager_copy):
+    games_manager_copy.add_game()
+    games_manager_copy.end_current_game("quit")
+    
+    text_display = games_manager_copy._objects.get_object("text_display")
+    expected_text = "Thanks for playing! Please come back soon."
+    assert expected_text == text_display._variables.get_variable_text("last_msg")
+
+def test_summarize_game_no_arguments_raises_error(games_manager_copy):
+    with pytest.raises(TypeError):
+        games_manager_copy.end_current_game()
+
+def test_summarize_game_too_many_arguments_raises_error(games_manager_copy):
+    with pytest.raises(TypeError):
+        games_manager_copy.end_current_game("win", "extra")
 
 
 # Test update_aggregate_feedback method

@@ -11,7 +11,7 @@ from main.tests.test_text_displayers import variable_values
 
 @pytest.fixture
 def game_fake():
-    game = Game(objects_fake_global_dict["easy"])
+    game = Game(objects_fake_global_dict["game_level"])
     return game
 
 
@@ -89,6 +89,70 @@ def test_add_guess_too_many_arguments_raises_error(game_fake):
 
 
 # Test summarize_game method
+def test_summarize_game_win_db(game_fake, sqlite_db_fake, test_db_path):
+    for table in ["game", "guess", "outcome"]:
+        sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
+    game_fake.configure_game()
+    game_fake._stats._score.value = 80
+    
+    game_fake.summarize_game("win")
+    
+    outcome_table_query = """SELECT outcome_id, game_id, session_id, outcome_type_id, score, feedback_type, improvement_area_id,
+                             play_again FROM outcome;"""
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 1, 1, 80, None, None, 0)] == db_entry
+
+def test_summarize_game_win_end_game_message(game_fake):
+    game_fake._stats._score.value = 80
+    
+    game_fake.summarize_game("win")
+    
+    expected_text = "That's correct! Congratulations! You are a winner!!!\n\nYour Score: 80\n\n\nThanks for playing! Please come back soon."
+    assert expected_text == game_fake._text_display._variables.get_variable_text("last_msg")
+
+def test_summarize_game_lose_db(game_fake, sqlite_db_fake, test_db_path):
+    for table in ["game", "guess", "outcome"]:
+        sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
+    game_fake.configure_game()
+    
+    game_fake.summarize_game("lose")
+    
+    outcome_table_query = """SELECT outcome_id, game_id, session_id, outcome_type_id, score, feedback_type, improvement_area_id,
+                             play_again FROM outcome;"""
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 1, 2, None, None, None, 0)] == db_entry
+
+def test_summarize_game_lose_end_game_message(game_fake):
+    game_fake.summarize_game("lose")
+    
+    expected_text = "I'm sorry! You ran out of tries.\n\nThanks for playing! Please come back soon."
+    assert expected_text == game_fake._text_display._variables.get_variable_text("last_msg")
+
+def test_summarize_game_quit_db(game_fake, sqlite_db_fake, test_db_path):
+    for table in ["game", "guess", "outcome"]:
+        sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
+    game_fake.configure_game()
+    
+    game_fake.summarize_game("quit")
+    
+    outcome_table_query = """SELECT outcome_id, game_id, session_id, outcome_type_id, score, feedback_type, improvement_area_id,
+                             play_again FROM outcome;"""
+    db_entry = sqlite_db_fake.run_query(outcome_table_query, fetch="all", _db_path=test_db_path)
+    assert [(1, 1, 1, 3, None, None, None, 0)] == db_entry
+
+def test_summarize_game_quit_message(game_fake):
+    game_fake.summarize_game("quit")
+    
+    expected_text = "Thanks for playing! Please come back soon."
+    assert expected_text == game_fake._text_display._variables.get_variable_text("last_msg")
+
+def test_summarize_game_no_arguments_raises_error(game_fake):
+    with pytest.raises(TypeError):
+        game_fake.summarize_game()
+
+def test_summarize_game_too_many_arguments_raises_error(game_fake):
+    with pytest.raises(TypeError):
+        game_fake.summarize_game("win", "extra")
 
 
 # Test get_outcome method
