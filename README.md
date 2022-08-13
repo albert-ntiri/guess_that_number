@@ -71,7 +71,8 @@ The code follows an object-oriented programming format.  It is broken down into 
 
 ### UML Class Diagram
 
-Here are the UML Class Diagrams for the current version of the code:[UML Class Diagrams](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/UML_Class_Diagrams_v3.pdf)
+Here are the UML Class Diagrams for the current version of the code:
+- [UML Class Diagrams](https://github.com/albert-ntiri/guess_that_number/blob/main/version_3/UML_Class_Diagrams_v3.pdf)
 
 ### Package Descriptions
 Here is a brief description of each package:
