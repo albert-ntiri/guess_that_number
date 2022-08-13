@@ -67,7 +67,7 @@ From that, the application provides a recommendation to the user for their next 
 </p>
 
 ## Code Structure
-The code follows an object-oriented programming format.  Version 2 consists of 11 classes; version 1 consists of 10.  *Note: The sections below describe the classes in version 2 of the application.*
+The code follows an object-oriented programming format.  It is broken down into packages that focus on different parts of the application.  *(Note: The first 2 versions did not have the package structure.)*
 
 ### UML Class Diagram
 
