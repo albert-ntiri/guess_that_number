@@ -57,6 +57,8 @@ These predictions are determined using the following features:
 - **total hints**: the number of hints provided during a game
 - **total duration**: how long the user took to play the game
 - **guess time ratio**: a ratio of the longest time before a guess to the shortest time before a guess *(this is only used to predict a score)*
+- **positive feedback percent**: the percent of guesses that were consistent with the last hint given
+- **win game percent**: the percent of games the user won since the last time they opened the app
 
 From that, the application provides a recommendation to the user for their next game.  That can come in the form of a target score or the next highest level of difficulty to try.
 
