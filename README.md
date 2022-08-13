@@ -75,19 +75,17 @@ The code follows an object-oriented programming format.  It is broken down into 
   <img src='version_2/images/UML_Class_Diagram.png' alt='uml_class_diagram' width='1000'/>
 </p>
 
-### Class Descriptions
-Here is a brief description of each class:
-- **Number**: This class validates user entries from both the custom range and guess fields to determine whether they are integers, if the range is ordered properly, and if the guesses match the corresponding hints.  It also generates random numbers, which are used to select a winning number and pick some of the hints.
-- **HintGenerator**: This class takes the winning number and uses it to generate a list of hints.  These hints include but are not limited to prime numbers, factors, multiples, and characteristics about the digits.
-- **WelcomePage**: This class allows users to select a level of difficulty, enter a custom range, and start the game.
-- **GamePage**: This class operates the game, including accepting users' guesses and evaluating them, updating the score, displaying hints and the number of guesses remaining, and providing options to submit a guess or quit the game.
-- **FarewellPage**: This class displays the final screen with the thank you message, feedback or recommendations to the user, and an option to play again.
-- **PageManager**: This class defines the pages of the application and allows for switching between which displays on the screen.
-- **AppText**: This class serves as a centralized location for the text displayed on the application.  It contains a dictionary attribute with all of that text, along with methods for other classes to retrieve specific text.
-- **Session**: This class tracks and stores data from the application.  It enters this data into a database and pulls data from the database as needed.
-- **AppData**: This class uses historical data from the application to make predictions on users' games and come up with recommendations to users based on their performance.
-- **Model**: This class provides the functionality to build machine learning models used for making predictions on games.
-- **GuessThatNumberGame**: This class builds the application and stores the main attributes for the games, which are used and updated by the 3 page classes: WelcomePage, GamePage, and FarewellPage.
+### Package Descriptions
+Here is a brief description of each package:
+- **main**: This package contains the main .py file that builds and runs the application, the .kv file that lays out the design of the app, and the database that stores data from the app.
+- **game**: This package contains modules that spell out how the logic of a single game works, including accepting user inputs, defining settings, generating hints, handling errors, evaluating guesses, managing the score, and displaying relevant text to the user.
+- **concepts**: This package contains modules that specify the different math concepts included in the game, how hints are generated for each of those concepts, and how guesses are evaluated given hints related to those concepts.
+- **resources**: This package contains packages and modules with commonly accessed objects needed for different aspects of the game, including a centralized object which stores other main objects.
+- **infrastructure**: This package, which is part of the resources package, contains modules that define the text, commonly-used data, math, and structure behind several parts of the application
+- **variables**: This package, which is part of the resources package, contains lists of variables that are referenced in the application in situations where the quantity or amount of code to define the variables is unusually long.
+- **app data**: This package contains packages and modules for managing different aspects of the data generated from the application, including a module that defines how the database is structured.
+- **data storers**: This package, which is part of the app data package, contains modules that indicate how data from games is stored in the database.
+- **analytics**: This package, which is part of the app data package, contains modules that define how predictions are made using historical data and machine learning, as well as defining user metrics that go into those predictions.
 
 ## Process
 To develop this app, I followed a process that included 4 main steps:
