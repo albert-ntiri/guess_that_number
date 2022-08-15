@@ -13,6 +13,11 @@ numbers = objects_fake_global.get_object("numbers")
 data = objects_fake_global.get_object("data")
 
 
+def test_settings_version_beginning():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
+
 ### HintManager Tests
 
 @pytest.fixture
@@ -26,6 +31,9 @@ def hints_fake(sqlite_db_fake, test_db_path):
     for table in non_type_tables:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
 
+
+def test_settings_version(hints_fake):
+    assert "easy" == hints_fake._settings.get_setting("level of difficulty name")
 
 # Test _update_hint_pool method
 def test_update_hint_pool(hints_fake):
@@ -392,3 +400,12 @@ def test_get_hint_list_db_relevant_hints_matches_hint_pool(hints_fake):
     assert hints_fake._relevant_hints == hints_fake._hint_pool
 
 
+def test_settings_version_end():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
+
+
+level_easy = data.get_sub_data_object("levels", "easy")
+settings = objects_fake_global.create_object(GameSettings, "settings", ObjectManagerFake, numbers, level_easy)
+settings.set_game_settings("", "")

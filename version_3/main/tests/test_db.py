@@ -7,9 +7,9 @@ from main.app_data.db import *
 
 ### Object Manager Setup
 
-objects_fake_global = objects_fake_global_dict["easy"]
-numbers = objects_fake_global.get_object("numbers")
-data = objects_fake_global.get_object("data")
+objects_fake_global_easy = objects_fake_global_dict["easy"]
+numbers = objects_fake_global_easy.get_object("numbers")
+data = objects_fake_global_easy.get_object("data")
 
 
 

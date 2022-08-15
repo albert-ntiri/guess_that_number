@@ -5,6 +5,11 @@ from main.tests.test_data import error_stub, game_outcome_stub
 
 
 
+def test_settings_version_beginning():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
+
 ### KivyVariableManager Tests
 
 @pytest.fixture
@@ -335,4 +340,9 @@ def test_clear_all_variables_display_manager_too_many_arguments_raises_error(tex
     with pytest.raises(TypeError):
         text_display_manager_fake.clear_all_variables("extra")
 
+
+def test_settings_version_end():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
 

@@ -12,7 +12,8 @@ from main.tests.test_text_displayers import variable_values
 @pytest.fixture
 def game_fake():
     game = Game(objects_fake_global_dict["game_level"])
-    return game
+    yield game
+    game.clear_text_variables()
 
 
 # Test _display_initial_status method

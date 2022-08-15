@@ -8,10 +8,15 @@ from main.game.game_stats import *
 
 ### Object Manager Setup
 
-objects_fake_global = objects_fake_global_dict["easy"]
+objects_fake_global_easy = objects_fake_global_dict["easy"]
 objects_fake_global_medium = objects_fake_global_dict["medium"]
 objects_fake_global_hard = objects_fake_global_dict["hard"]
 
+
+def test_settings_version_beginning():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
 
 ### Stat Tests
 
@@ -72,7 +77,7 @@ def test_update_stat_too_many_arguments_raises_error(stat_stub):
 
 @pytest.fixture
 def game_stat_fake_easy():
-    return GameStat(objects_fake_global)
+    return GameStat(objects_fake_global_easy)
 
 @pytest.fixture
 def game_stat_fake_medium():
@@ -106,7 +111,7 @@ def test_set_default_value_too_many_arguments_raises_error(game_stat_fake_easy):
 
 @pytest.fixture
 def game_score_fake_easy():
-    return GameScore(objects_fake_global)
+    return GameScore(objects_fake_global_easy)
 
 @pytest.fixture
 def game_score_fake_medium():
@@ -145,7 +150,7 @@ def test_set_default_value_score_easy(game_score_fake_easy):
 
 @pytest.fixture
 def guesses_remaining_fake_easy():
-    return GuessesRemaining(objects_fake_global)
+    return GuessesRemaining(objects_fake_global_easy)
 
 @pytest.fixture
 def guesses_remaining_fake_medium():
@@ -189,7 +194,7 @@ def test_set_default_value_guesses_remaining_hard(guesses_remaining_fake_hard):
 
 @pytest.fixture
 def game_stats_fake_easy():
-    return GameStatsManager(objects_fake_global)
+    return GameStatsManager(objects_fake_global_easy)
 
 
 # Test update_game_stats method
@@ -221,4 +226,9 @@ def test_get_value_guesses_remaining_easy(game_stats_fake_easy):
     game_stats_fake_easy.update_game_stats()
     assert 10 == game_stats_fake_easy.get_value("guesses remaining")
 
+
+def test_settings_version_end():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
 

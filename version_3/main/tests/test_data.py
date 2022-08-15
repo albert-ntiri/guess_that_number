@@ -219,8 +219,8 @@ def test_score_property_updated_message(successful_outcome_stub):
 
 @pytest.fixture
 def data_copy():
-    objects_fake_global = objects_fake_global_dict["easy"]
-    return objects_fake_global.get_object("data")
+    objects_fake_global_easy = objects_fake_global_dict["easy"]
+    return objects_fake_global_easy.get_object("data")
 
 
 ### LevelOfDifficultyTypes Tests

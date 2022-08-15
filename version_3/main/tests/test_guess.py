@@ -10,15 +10,21 @@ from main.tests.test_data_storers import prime_hint
 
 @pytest.fixture
 def guess_copy():
-    return Guess(5, objects_fake_global_dict["easy"])
+    guess = Guess(5, objects_fake_global_dict["easy"])
+    guess._text_display.clear_all_variables()
+    return guess
 
 @pytest.fixture
 def guess_copy_medium():
-    return Guess("5.5", objects_fake_global_dict["medium"])
+    guess = Guess("5.5", objects_fake_global_dict["medium"])
+    guess._text_display.clear_all_variables()
+    return guess
 
 @pytest.fixture
 def guess_copy_hard():
-    return Guess(5, objects_fake_global_dict["hard"])
+    guess = Guess(5, objects_fake_global_dict["hard"])
+    guess._text_display.clear_all_variables()
+    return guess
 
 
 # Test get_guess method

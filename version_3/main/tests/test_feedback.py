@@ -7,7 +7,7 @@ from main.game.feedback import *
 
 ### Object Manager Setup
 
-objects_fake_global = objects_fake_global_dict["game_level"]
+objects_fake_global_game_level = objects_fake_global_dict["game_level"]
 
 
 
@@ -17,7 +17,7 @@ objects_fake_global = objects_fake_global_dict["game_level"]
 def guess_feedback_copy_one_hint(sqlite_db_fake, test_db_path):
     for table in ["game", "guess"]:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
-    games = objects_fake_global.get_object("games")
+    games = objects_fake_global_game_level.get_object("games")
     games.add_game()
     games._current_game._outcome = "lose"
     
@@ -27,17 +27,18 @@ def guess_feedback_copy_one_hint(sqlite_db_fake, test_db_path):
                            VALUES(1, 1, 2, '{multiple_hint}');"""
         sqlite_db_fake.run_query(insert_query, _db_path=test_db_path)
     feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
-    guess_feedback = GuessFeedback(objects_fake_global, feedback, 2)
+    guess_feedback = GuessFeedback(objects_fake_global_game_level, feedback, 2)
     
     yield guess_feedback
     
     guess_feedback._feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
+    games._games = []
 
 @pytest.fixture
 def guess_feedback_copy_two_hints(sqlite_db_fake, test_db_path):
     for table in ["game", "guess"]:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
-    games = objects_fake_global.get_object("games")
+    games = objects_fake_global_game_level.get_object("games")
     games.add_game()
     games._current_game._outcome = "lose"
     
@@ -47,11 +48,12 @@ def guess_feedback_copy_two_hints(sqlite_db_fake, test_db_path):
                            VALUES(1, 1, 2, '{multiple_hint}');"""
         sqlite_db_fake.run_query(insert_query, _db_path=test_db_path)
     feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
-    guess_feedback = GuessFeedback(objects_fake_global, feedback, 2)
+    guess_feedback = GuessFeedback(objects_fake_global_game_level, feedback, 2)
     
     yield guess_feedback
     
     guess_feedback._feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
+    games._games = []
 
 
 # Test _generate_guess_feedback method
@@ -141,21 +143,22 @@ def test_get_feedback_guess_too_many_arguments_raises_error(guess_feedback_copy_
 def game_feedback_copy(sqlite_db_fake, test_db_path):
     for table in ["game", "outcome"]:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
-    games = objects_fake_global.get_object("games")
+    games = objects_fake_global_game_level.get_object("games")
     games.add_game()
     games._current_game._outcome = "lose"
-    data = objects_fake_global.get_object("data")
+    data = objects_fake_global_game_level.get_object("data")
     outcome_obj = data.get_sub_data_object("outcomes", "lose")
     db_update_params_new = {"entry_type": "New", "outcome_obj": outcome_obj}
-    session = objects_fake_global.get_object("session")
+    session = objects_fake_global_game_level.get_object("session")
     session.update_database("outcome", db_update_params_new)
     
     feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
-    game_feedback = GameFeedback(objects_fake_global, feedback, None)
+    game_feedback = GameFeedback(objects_fake_global_game_level, feedback, None)
     
     yield game_feedback
     
     game_feedback._feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
+    games._games = []
 
 
 # Test _record_game_feedback method
@@ -270,14 +273,16 @@ def test_get_feedback_too_many_arguments_raises_error(game_feedback_copy):
 def feedback_manager_copy(sqlite_db_fake, test_db_path):
     for table in ["game", "guess"]:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
-    games = objects_fake_global.get_object("games")
+    games = objects_fake_global_game_level.get_object("games")
     games.add_game()
     games._current_game._outcome = "lose"
-    feedback_manager = objects_fake_global.create_object(FeedbackManager, "feedback", FeedbackManager, objects_fake_global)
+    feedback_manager = objects_fake_global_game_level.create_object(
+        FeedbackManager, "feedback", FeedbackManager, objects_fake_global_game_level)
     
     yield feedback_manager
     
     feedback_manager._feedback = pd.DataFrame(columns=["hint_type", "hint", "guess", "feedback_ind"])
+    games._games = []
 
 
 # Test get_guess_feedback method

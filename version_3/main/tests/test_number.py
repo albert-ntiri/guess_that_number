@@ -9,6 +9,11 @@ def numbers():
     return objects_fake_global.get_object("numbers")
 
 
+def test_settings_version_beginning():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
+
 ### Validator Object Tests
 
 @pytest.fixture
@@ -510,3 +515,10 @@ def test_get_number_info_first_argument_not_found(numbers):
 def test_get_number_info_no_arguments_raises_error(numbers):
     with pytest.raises(TypeError):
         numbers.get_number_info()
+
+
+def test_settings_version_end():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
+

@@ -23,6 +23,11 @@ def session_fake(sqlite_db_fake, test_db_path):
 
 
 
+def test_settings_version_beginning():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
+
 ### Session Tests
 
 
@@ -276,4 +281,9 @@ def test_get_session_count_too_many_arguments_raises_error(session_fake):
         session_fake.get_session_count("extra")
 
 
+
+def test_settings_version_end():
+    objects_fake_global = objects_fake_global_dict["easy"]
+    settings = objects_fake_global.get_object("settings")
+    assert "easy" == settings.get_setting("level of difficulty name")
 

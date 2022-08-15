@@ -190,3 +190,6 @@ def test_get_game_count_too_many_arguments_raises_error(games_manager_copy):
 
 
 
+objects = objects_fake_global_dict["game_level"]
+text_display = objects.get_object("text_display")
+text_display.clear_all_variables()

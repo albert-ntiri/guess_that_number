@@ -46,8 +46,12 @@ page_manager_fake = PageManagerFake()
 
 
 objects_fake_global_dict = {}
-for level in ["easy", "medium", "hard"]:
-    objects_fake_global = ObjectManagerFake()
+objects_fake_global_easy = ObjectManagerFake()
+objects_fake_global_medium = ObjectManagerFake()
+objects_fake_global_hard = ObjectManagerFake()
+objects_list = [objects_fake_global_easy, objects_fake_global_medium, objects_fake_global_hard]
+
+for level, objects_fake_global in zip(["easy", "medium", "hard"], objects_list):
     numbers = objects_fake_global.create_object(Number, "numbers", ObjectManagerFake)
     text = objects_fake_global.create_object(TextManager, "text", ObjectManagerFake)
     data = objects_fake_global.create_object(DataManager, "data", ObjectManagerFake, text)
@@ -91,3 +95,6 @@ objects_game_level.add_object("level_obj", difficulty_level)
 games_manager = objects_game_level.create_object(GamesManager, "games", ObjectManagerFake, objects_game_level)
 
 objects_fake_global_dict["game_level"] = objects_game_level
+
+
+text_display.clear_all_variables()

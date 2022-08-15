@@ -10,14 +10,14 @@ from main.app_data.data_storers.outcome_data_storers import *
 
 ### Object Manager Setup
 
-objects_fake_global = objects_fake_global_dict["easy"]
-settings = objects_fake_global.get_object("settings")
+objects_fake_global_easy = objects_fake_global_dict["easy"]
+settings = objects_fake_global_easy.get_object("settings")
 
 
 @pytest.fixture
 def session_fake(sqlite_db_fake, test_db_path):
     sqlite_db_fake.run_query("DELETE FROM session;", _db_path=test_db_path)
-    session = objects_fake_global.get_object("session")
+    session = objects_fake_global_easy.get_object("session")
     return session
 
 
@@ -94,7 +94,7 @@ def db_update_object(session_fake):
 
 @pytest.fixture
 def storage_manager_fake(session_fake):
-    return StorageManagerFake(session_fake, objects_fake_global)
+    return StorageManagerFake(session_fake, objects_fake_global_easy)
 
 
 # Test _process_update method
@@ -178,7 +178,7 @@ def test_update_db_table_game_error_entry_too_many_arguments_raises_error(game_e
 @pytest.fixture
 def game_storage_manager_copy(session_fake, sqlite_db_fake, test_db_path):
     sqlite_db_fake.run_query("DELETE FROM game;", _db_path=test_db_path)
-    return GameStorageManager(session_fake, objects_fake_global)
+    return GameStorageManager(session_fake, objects_fake_global_easy)
 
 
 # Test update_database method
@@ -316,7 +316,7 @@ def test_update_db_table_guess_error_entry_too_many_arguments_raises_error(guess
 def guess_storage_manager_copy(session_fake, sqlite_db_fake, test_db_path):
     for table in ["game", "guess"]:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
-    return GuessStorageManager(session_fake, objects_fake_global)
+    return GuessStorageManager(session_fake, objects_fake_global_easy)
 
 
 # Test update_database method
@@ -493,7 +493,7 @@ def test_update_db_table_feedback_update_too_many_arguments_raises_error(feedbac
 def outcome_storage_manager_copy(session_fake, sqlite_db_fake, test_db_path):
     for table in ["game", "outcome"]:
         sqlite_db_fake.run_query(f"DELETE FROM {table};", _db_path=test_db_path)
-    return OutcomeStorageManager(session_fake, objects_fake_global)
+    return OutcomeStorageManager(session_fake, objects_fake_global_easy)
 
 
 # Test _add_outcome_record_to_db method
